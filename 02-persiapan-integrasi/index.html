@@ -16,7 +16,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="../introduction-transaction-flow/">
+        <link rel="next" href="../transaksi-direct/pembelian-pulsa-data/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Persiapan integrasi - Dokumentasi API Indotech</title>
+        <title>Pengenalan & persiapan integrasi - Dokumentasi API Indotech</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#persiapan-integrasi" class="md-skip">
+        <a href="#pengenalan-persiapan-integrasi" class="md-skip">
           Lewati ke isi
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Persiapan integrasi
+              Pengenalan & persiapan integrasi
             
           </span>
         </div>
@@ -305,7 +305,7 @@
   <span class="md-ellipsis">
     
   
-    Persiapan integrasi
+    Pengenalan & persiapan integrasi
   
 
     
@@ -323,7 +323,7 @@
   <span class="md-ellipsis">
     
   
-    Persiapan integrasi
+    Pengenalan & persiapan integrasi
   
 
     
@@ -349,6 +349,68 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#pengenalan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pengenalan
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pengenalan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Base URL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autentikasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autentikasi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#field-transaksi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Field Transaksi
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#persiapan-integrasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Persiapan integrasi
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Persiapan integrasi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#1-ip-statis-whitelist" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -358,8 +420,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#2-token-jwt" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -369,8 +431,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#3-konvensi-request_id" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -380,8 +442,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#4-https" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -389,6 +451,61 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alur-transaksi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alur transaksi
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alur transaksi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#direct-purchase-tanpa-inquiry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Direct purchase tanpa inquiry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payment-dengan-inquiry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Payment dengan inquiry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referensi-cepat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referensi cepat
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -406,37 +523,8 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../introduction-transaction-flow/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Introduction & Transaction Flow
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
     
     
-      
-        
       
         
       
@@ -455,10 +543,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -476,8 +564,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -515,6 +603,71 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Game
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Game
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
                 
   
@@ -522,14 +675,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../transaksi-direct/skenario-pengujian/" class="md-nav__link">
+      <a href="../game/topup-voucher/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Test Case
+    Top Up & Voucher
   
 
     
@@ -588,7 +741,7 @@
   <span class="md-ellipsis">
     
   
-    Game
+    E-wallet
   
 
     
@@ -601,131 +754,6 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Game
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../game/topup-voucher/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Top Up & Voucher
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../transaksi-direct/skenario-pengujian/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Test Case
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    E-wallet
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -750,34 +778,6 @@
     
   
     Ewallet Direct Purchase
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../transaksi-direct/skenario-pengujian/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Test Case
   
 
     
@@ -885,10 +885,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
   
@@ -906,8 +906,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1063,6 +1063,68 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#pengenalan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pengenalan
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pengenalan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Base URL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autentikasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autentikasi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#field-transaksi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Field Transaksi
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#persiapan-integrasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Persiapan integrasi
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Persiapan integrasi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#1-ip-statis-whitelist" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1072,8 +1134,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#2-token-jwt" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1083,8 +1145,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#3-konvensi-request_id" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1094,8 +1156,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#4-https" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1103,6 +1165,61 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alur-transaksi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alur transaksi
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alur transaksi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#direct-purchase-tanpa-inquiry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Direct purchase tanpa inquiry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payment-dengan-inquiry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Payment dengan inquiry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referensi-cepat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referensi cepat
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1126,29 +1243,102 @@
   
 
 
-<h1 id="persiapan-integrasi">Persiapan integrasi<a class="headerlink" href="#persiapan-integrasi" title="Permanent link">&para;</a></h1>
+<h1 id="pengenalan-persiapan-integrasi">Pengenalan &amp; persiapan integrasi<a class="headerlink" href="#pengenalan-persiapan-integrasi" title="Permanent link">&para;</a></h1>
+<h2 id="pengenalan">Pengenalan<a class="headerlink" href="#pengenalan" title="Permanent link">&para;</a></h2>
+<p>SOCX menyediakan API reseller untuk transaksi prabayar via koneksi host-to-host.</p>
+<h3 id="base-url">Base URL<a class="headerlink" href="#base-url" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>https://indotechapi.socx.app/reseller/api/v1
+</code></pre></div>
+<h3 id="autentikasi">Autentikasi<a class="headerlink" href="#autentikasi" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Header</strong> : <code>Authorization: Bearer &lt;JWT&gt;</code><br />
+  Token diperoleh dari halaman <strong>Settings</strong> (portal reseller).</li>
+</ul>
+<h3 id="field-transaksi">Field Transaksi<a class="headerlink" href="#field-transaksi" title="Permanent link">&para;</a></h3>
+<p>Berikut adalah field yang wajib disertakan saat melakukan transaksi:</p>
+<ul>
+<li><code>code</code>: kode produk (SKU)</li>
+<li><code>msisdn</code>: nomor tujuan / ID tujuan sesuai produk</li>
+<li><code>request_id</code>: ID unik dari sisi client</li>
+</ul>
+<h2 id="persiapan-integrasi">Persiapan integrasi<a class="headerlink" href="#persiapan-integrasi" title="Permanent link">&para;</a></h2>
 <p>Checklist sebelum mulai hit API production.</p>
-<h2 id="1-ip-statis-whitelist">1. IP statis &amp; whitelist<a class="headerlink" href="#1-ip-statis-whitelist" title="Permanent link">&para;</a></h2>
+<h3 id="1-ip-statis-whitelist">1. IP statis &amp; whitelist<a class="headerlink" href="#1-ip-statis-whitelist" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Pastikan server integrasi memakai <strong>IP statis</strong> (atau rentang yang disepakati).</li>
 <li>Kirim IP ke tim SOCX untuk <strong>whitelist</strong> di sisi API.</li>
 <li>Tanpa whitelist, request dapat ditolak di layer jaringan atau aplikasi.</li>
 </ul>
-<h2 id="2-token-jwt">2. Token (JWT)<a class="headerlink" href="#2-token-jwt" title="Permanent link">&para;</a></h2>
+<h3 id="2-token-jwt">2. Token (JWT)<a class="headerlink" href="#2-token-jwt" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Login ke portal reseller SOCX.</li>
 <li>Buka <strong>Settings</strong>.</li>
 <li>Salin token dan simpan sebagai rahasia .</li>
 <li>Header: <code>Authorization: Bearer &lt;token&gt;</code>.</li>
 </ol>
-<h2 id="3-konvensi-request_id">3. Konvensi <code>request_id</code><a class="headerlink" href="#3-konvensi-request_id" title="Permanent link">&para;</a></h2>
+<h3 id="3-konvensi-request_id">3. Konvensi <code>request_id</code><a class="headerlink" href="#3-konvensi-request_id" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Harus <strong>unik per percobaan transaksi baru</strong> dari sisi Anda.</li>
 <li>Jika Anda mengirim ulang <code>request_id</code> yang <strong>sudah pernah diproses</strong> di server SOCX, API mengembalikan <strong>respons yang sama</strong> dengan transaksi tersebut (idempotensi).</li>
 </ul>
-<p>Disarankan: prefix lingkungan + timestamp + random, contoh <code>STG-20250322-abc12</code>.</p>
-<h2 id="4-https">4. HTTPS<a class="headerlink" href="#4-https" title="Permanent link">&para;</a></h2>
+<h3 id="4-https">4. HTTPS<a class="headerlink" href="#4-https" title="Permanent link">&para;</a></h3>
 <p>Selalu gunakan <strong>HTTPS</strong> untuk semua panggilan API.</p>
+<h2 id="alur-transaksi">Alur transaksi<a class="headerlink" href="#alur-transaksi" title="Permanent link">&para;</a></h2>
+<h3 id="direct-purchase-tanpa-inquiry">Direct purchase tanpa inquiry<a class="headerlink" href="#direct-purchase-tanpa-inquiry" title="Permanent link">&para;</a></h3>
+<p>Dipakai saat produk tidak butuh pre-check.</p>
+<ol>
+<li>(Opsional) <code>GET /saldo</code></li>
+<li><code>POST /purchase</code></li>
+<li>Cek <code>rc</code> di respons</li>
+<li>Jika <code>rc=68</code>, lanjut <code>POST /status</code> sampai final</li>
+</ol>
+<pre class="mermaid"><code>sequenceDiagram
+  autonumber
+  participant Client as Client/Reseller
+  participant Indotech as Indotech
+  participant Biller as Biller/Provider
+
+  Client-&gt;&gt;Indotech: POST /purchase (code, msisdn, request_id)
+  alt Pending (rc=68)
+    Indotech-&gt;&gt;Biller: proses transaksi
+    Indotech--&gt;&gt;Client: pending
+    Biller--&gt;&gt;Indotech: hasil final
+    Indotech--&gt;&gt;Client: final (00 / gagal)
+  else Langsung final
+    Indotech--&gt;&gt;Client: final (00 / gagal)
+  end</code></pre>
+<h3 id="payment-dengan-inquiry">Payment dengan inquiry<a class="headerlink" href="#payment-dengan-inquiry" title="Permanent link">&para;</a></h3>
+<p>Dipakai saat produk butuh validasi dulu (contoh: PLN, DANA inquiry).</p>
+<ol>
+<li><code>POST /inquiry</code></li>
+<li>Validasi hasil inquiry (<code>rc=00</code>, data pelanggan/produk)</li>
+<li><code>POST /purchase</code></li>
+<li>Jika <code>rc=68</code>, lanjut <code>POST /status</code></li>
+</ol>
+<pre class="mermaid"><code>sequenceDiagram
+  autonumber
+  participant Client as Client/Reseller
+  participant Indotech as Indotech
+  participant Biller as Biller/Provider
+
+  Client-&gt;&gt;Indotech: POST /inquiry
+  Indotech--&gt;&gt;Client: response inquiry
+  Client-&gt;&gt;Indotech: POST /purchase
+  alt Pending (rc=68)
+    Indotech--&gt;&gt;Client: pending
+    Biller--&gt;&gt;Indotech: hasil final
+    Indotech--&gt;&gt;Client: final (00 / gagal)
+  else Langsung final
+    Indotech--&gt;&gt;Client: final (00 / gagal)
+  end</code></pre>
+<h3 id="referensi-cepat">Referensi cepat<a class="headerlink" href="#referensi-cepat" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Purchase prepaid: <a href="../transaksi-direct/pembelian-pulsa-data/">Pembelian Pulsa &amp; Data</a></li>
+<li>Purchase game: <a href="../game/topup-voucher/">Top Up &amp; Voucher</a></li>
+<li>Purchase ewallet: <a href="../transaksi-direct/pembelian-ewallet/">Ewallet Direct Purchase</a></li>
+<li>Inquiry PLN: <a href="../inquiry/inquiry-pln/">Inquiry PLN</a></li>
+<li>Inquiry DANA: <a href="../ewallet/dana-inquiry/">DANA (inquiry)</a></li>
+</ul>
 
 
 
