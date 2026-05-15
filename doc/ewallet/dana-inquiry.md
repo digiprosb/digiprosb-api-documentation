@@ -79,11 +79,6 @@ curl -L -X POST 'https://indotechapi.socx.app/reseller/api/v1/inquiry' \
 
 ### Request
 
-| Field | Wajib | Keterangan |
-|-------|-------|------------|
-| `code` | Ya | Sama dengan inquiry, contoh: `DANA` |
-| `idpel` | Ya | Sama dengan inquiry |
-| `request_id` | Ya | ID unik **baru** untuk payment |
 
 ```bash
 curl -L -X POST 'https://indotechapi.socx.app/reseller/api/v1/payment' \
