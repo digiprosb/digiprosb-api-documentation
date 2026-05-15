@@ -192,7 +192,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/maulana222/socx-api-documentation" title="Ke repositori" class="md-source" data-md-component="source">
+        <a href="https://github.com/indotech-payment/socx-api-documentation" title="Ke repositori" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -238,7 +238,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/maulana222/socx-api-documentation" title="Ke repositori" class="md-source" data-md-component="source">
+      <a href="https://github.com/indotech-payment/socx-api-documentation" title="Ke repositori" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -593,7 +593,7 @@
   <span class="md-ellipsis">
     
   
-    Dana (inquiry)
+    DANA (inquiry)
   
 
     
@@ -915,13 +915,32 @@
 
 
 <h1 id="payment-with-inquiry">payment with inquiry<a class="headerlink" href="#payment-with-inquiry" title="Permanent link">&para;</a></h1>
-<p>Alur <strong>payment with inquiry</strong> berarti Anda memanggil <strong><code>POST /inquiry</code></strong> terlebih dahulu untuk <strong>validasi pelanggan / informasi produk</strong>, lalu <strong><code>POST /purchase</code></strong> dengan parameter yang konsisten (misalnya <code>code</code> dan field tujuan dari hasil inquiry). Dipakai ketika SKU atau biller mewajibkan pre-check sebelum debit (contoh: <strong>PLN prabayar</strong>, <strong>DANA</strong> dengan alur inquiry denom, produk lain sesuai katalog).</p>
+<p>Alur <strong>payment with inquiry</strong> berarti Anda memanggil <strong><code>POST /inquiry</code></strong> terlebih dahulu untuk <strong>validasi pelanggan / informasi produk</strong>, lalu melakukan debit dengan parameter yang konsisten dari hasil inquiry.</p>
+<table>
+<thead>
+<tr>
+<th>Produk</th>
+<th>Endpoint setelah inquiry</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DANA</strong> (post paid)</td>
+<td><code>POST /payment</code> — field <code>code</code>, <code>idpel</code>, <code>request_id</code> baru</td>
+</tr>
+<tr>
+<td>Pulsa, game, e-wallet direct, PLN purchase, dll.</td>
+<td><code>POST /purchase</code> — field sesuai kategori</td>
+</tr>
+</tbody>
+</table>
+<p>Dipakai ketika SKU atau biller mewajibkan pre-check sebelum debit (contoh: <strong>PLN prabayar</strong>, <strong>DANA</strong>, produk lain sesuai katalog).</p>
 <p>Request detail (payload) mengikuti kontrak SOCX/API untuk produk Anda.</p>
 <h2 id="ringkasan-langkah-integrasi">Ringkasan langkah integrasi<a class="headerlink" href="#ringkasan-langkah-integrasi" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong><a href="../../inquiry/inquiry-post/"><code>POST /inquiry</code></a></strong> — kirim <code>code</code> dan field yang diminta (mis. <code>idpel</code> untuk PLN); pastikan <code>rc = 00</code> dan data tampilan (<code>info[]</code>) sesuai kebutuhan UI.</li>
-<li><strong><code>POST /purchase</code></strong> — gunakan <code>code</code> yang tepat serta <code>msisdn</code> / field setara sesuai kontrak produk (mapping dari inquiry jika perlu). Referensi per kategori:
-   <a href="../pembelian-pulsa-data/">pulsa/data</a>, <a href="../../game/topup-voucher/">game — Top Up &amp; Voucher</a>, <a href="../pembelian-ewallet/">ewallet</a>.</li>
+<li><strong><code>POST /inquiry</code></strong> — kirim <code>code</code> dan field yang diminta (mis. <code>idpel</code> untuk PLN); pastikan <code>rc = 00</code> dan data tampilan (<code>info[]</code>) sesuai kebutuhan UI. Contoh: <a href="../../inquiry/inquiry-pln/">Inquiry PLN</a>, <a href="../../ewallet/dana-inquiry/">DANA</a>.</li>
+<li><strong>Debit</strong> — <code>POST /payment</code> (DANA) atau <code>POST /purchase</code> (kategori lain). Referensi:
+   <a href="../../ewallet/dana-inquiry/">DANA inquiry → payment</a>, <a href="../pembelian-pulsa-data/">pulsa/data</a>, <a href="../../game/topup-voucher/">game — Top Up &amp; Voucher</a>, <a href="../pembelian-ewallet/">ewallet direct</a>.</li>
 <li><strong>Baca <code>rc</code></strong> — sama dengan alur tanpa inquiry; lihat <a href="../kode-respons/">kode respons</a>.</li>
 <li>Jika <strong><code>rc = 68</code></strong> — <a href="../cek-status/"><code>POST /status</code></a> atau callback (jika ada).</li>
 </ol>
@@ -958,16 +977,16 @@
 <td><a href="../../inquiry/">Inquiry &amp; katalog</a></td>
 </tr>
 <tr>
-<td>Contoh <code>POST /inquiry</code> (JSON)</td>
-<td><a href="../../inquiry/inquiry-post/">Inquiry POST (JSON)</a></td>
+<td>Inquiry PLN</td>
+<td><a href="../../inquiry/inquiry-pln/">Inquiry PLN</a></td>
 </tr>
 <tr>
 <td>PLN prabayar</td>
 <td><a href="../../inquiry/inquiry-pln/">Inquiry PLN</a></td>
 </tr>
 <tr>
-<td>DANA (inquiry denom)</td>
-<td><a href="../../ewallet/dana-inquiry/">Ringkasan DANA</a></td>
+<td>DANA (inquiry → payment)</td>
+<td><a href="../../ewallet/dana-inquiry/">DANA — Inquiry → Payment</a></td>
 </tr>
 </tbody>
 </table>
