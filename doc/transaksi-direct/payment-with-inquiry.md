@@ -1,14 +1,21 @@
 # payment with inquiry
 
-Alur **payment with inquiry** berarti Anda memanggil **`POST /inquiry`** terlebih dahulu untuk **validasi pelanggan / informasi produk**, lalu **`POST /purchase`** dengan parameter yang konsisten (misalnya `code` dan field tujuan dari hasil inquiry). Dipakai ketika SKU atau biller mewajibkan pre-check sebelum debit (contoh: **PLN prabayar**, **DANA** dengan alur inquiry denom, produk lain sesuai katalog).
+Alur **payment with inquiry** berarti Anda memanggil **`POST /inquiry`** terlebih dahulu untuk **validasi pelanggan / informasi produk**, lalu melakukan debit dengan parameter yang konsisten dari hasil inquiry.
+
+| Produk | Endpoint setelah inquiry |
+|--------|---------------------------|
+| **DANA** (post paid) | `POST /payment` — field `code`, `idpel`, `request_id` baru |
+| Pulsa, game, e-wallet direct, PLN purchase, dll. | `POST /purchase` — field sesuai kategori |
+
+Dipakai ketika SKU atau biller mewajibkan pre-check sebelum debit (contoh: **PLN prabayar**, **DANA**, produk lain sesuai katalog).
 
 Request detail (payload) mengikuti kontrak SOCX/API untuk produk Anda.
 
 ## Ringkasan langkah integrasi
 
-1. **[`POST /inquiry`](../inquiry/inquiry-post.md)** — kirim `code` dan field yang diminta (mis. `idpel` untuk PLN); pastikan `rc = 00` dan data tampilan (`info[]`) sesuai kebutuhan UI.
-2. **`POST /purchase`** — gunakan `code` yang tepat serta `msisdn` / field setara sesuai kontrak produk (mapping dari inquiry jika perlu). Referensi per kategori:
-   [pulsa/data](pembelian-pulsa-data.md), [game — Top Up & Voucher](../game/topup-voucher.md), [ewallet](pembelian-ewallet.md).
+1. **`POST /inquiry`** — kirim `code` dan field yang diminta (mis. `idpel` untuk PLN); pastikan `rc = 00` dan data tampilan (`info[]`) sesuai kebutuhan UI. Contoh: [Inquiry PLN](../inquiry/inquiry-pln.md), [DANA](../ewallet/dana-inquiry.md).
+2. **Debit** — `POST /payment` (DANA) atau `POST /purchase` (kategori lain). Referensi:
+   [DANA inquiry → payment](../ewallet/dana-inquiry.md), [pulsa/data](pembelian-pulsa-data.md), [game — Top Up & Voucher](../game/topup-voucher.md), [ewallet direct](pembelian-ewallet.md).
 3. **Baca `rc`** — sama dengan alur tanpa inquiry; lihat [kode respons](kode-respons.md).
 4. Jika **`rc = 68`** — [`POST /status`](cek-status.md) atau callback (jika ada).
 
@@ -40,9 +47,9 @@ sequenceDiagram
 | Produk / topik | Halaman |
 |----------------|---------|
 | Kontrak umum inquiry | [Inquiry & katalog](../inquiry/README.md) |
-| Contoh `POST /inquiry` (JSON) | [Inquiry POST (JSON)](../inquiry/inquiry-post.md) |
+| Inquiry PLN | [Inquiry PLN](../inquiry/inquiry-pln.md) |
 | PLN prabayar | [Inquiry PLN](../inquiry/inquiry-pln.md) |
-| DANA (inquiry denom) | [Ringkasan DANA](../ewallet/dana-inquiry.md) |
+| DANA (inquiry → payment) | [DANA — Inquiry → Payment](../ewallet/dana-inquiry.md) |
 
 ## Catatan
 

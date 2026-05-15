@@ -83,7 +83,7 @@ sequenceDiagram
 
 ### Payment dengan inquiry
 
-Dipakai saat produk butuh validasi dulu (contoh: PLN, DANA inquiry).
+Dipakai saat produk butuh validasi dulu (contoh: PLN, DANA — lalu `POST /payment`).
 
 1. `POST /inquiry`
 2. Validasi hasil inquiry (`rc=00`, data pelanggan/produk)
@@ -99,7 +99,7 @@ sequenceDiagram
 
   Client->>Indotech: POST /inquiry
   Indotech-->>Client: response inquiry
-  Client->>Indotech: POST /purchase
+  Client->>Indotech: POST /payment atau POST /purchase
   alt Pending (rc=68)
     Indotech-->>Client: pending
     Biller-->>Indotech: hasil final
@@ -115,4 +115,4 @@ sequenceDiagram
 - Purchase game: [Top Up & Voucher](game/topup-voucher.md)
 - Purchase ewallet: [Ewallet Direct Purchase](transaksi-direct/pembelian-ewallet.md)
 - Inquiry PLN: [Inquiry PLN](inquiry/inquiry-pln.md)
-- Inquiry DANA: [DANA (inquiry)](ewallet/dana-inquiry.md)
+- DANA (inquiry → payment): [DANA — Inquiry → Payment](ewallet/dana-inquiry.md)

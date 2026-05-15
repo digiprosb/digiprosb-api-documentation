@@ -17,7 +17,7 @@ Repositori ini berisi **dokumentasi teknis** untuk integrasi **Host-to-Host (H2H
 ### EWALLET
 
 - [Ringkasan EWALLET](doc/ewallet/README.md)
-- [DANA (inquiry) — ringkasan](doc/ewallet/dana-inquiry.md)
+- [DANA — inquiry → payment](doc/ewallet/dana-inquiry.md)
 
 ### Inquiry khusus
 
@@ -41,7 +41,7 @@ Repositori ini berisi **dokumentasi teknis** untuk integrasi **Host-to-Host (H2H
 | Pengenalan & persiapan integrasi | Tersedia | Base URL, auth, whitelist, `request_id`, diagram alur |
 | PREPAID (pulsa, data) | Tersedia | Request & respon |
 | GAME (top-up & voucher) | Tersedia | [Top Up & Voucher](doc/game/topup-voucher.md) — satu halaman |
-| EWALLET (direct purchase, DANA inquiry) | Tersedia | Termasuk denom tetap & open amount |
+| EWALLET (direct purchase, DANA inquiry → payment) | Tersedia | `POST /inquiry` + `POST /payment`; denom tetap & bebas |
 | Inquiry PLN | Tersedia | Contoh `CPLN` |
 | Direct purchase (JSON / HTTP) | Tersedia | `code`, `msisdn`, `request_id` |
 | Cek saldo · status · RC | Tersedia | `GET /saldo`, `POST /status`, tabel RC |
@@ -99,7 +99,6 @@ Alur: [Pengenalan & persiapan integrasi — bagian alur](doc/02-persiapan-integr
     ├── ewallet/              ← Direct purchase + DANA inquiry
     ├── inquiry/
     │   ├── README.md
-    │   ├── inquiry-post.md   ← POST /inquiry (kontrak umum)
     │   └── inquiry-pln.md    ← Contoh CPLN
     └── transaksi-direct/     ← Purchase, saldo, status, RC, klasifikasi game
 ```
@@ -108,7 +107,7 @@ Alur: [Pengenalan & persiapan integrasi — bagian alur](doc/02-persiapan-integr
 
 ## Lisensi & kontak
 
-Hak cipta dan kebijakan distribusi dokumen mengikuti kebijakan **Indotech / pemilik API**. Untuk akses sandbox, whitelist IP, atau pertanyaan integrasi, hubungi **tim teknis Indotech** melalui kanal resmi yang diberikan kepada mitra.
+Hak cipta dan kebijakan distribusi dokumen mengikuti kebijakan **Indotech / pemilik API**. Untuk whitelist IP, kredensial API, atau pertanyaan integrasi, hubungi **tim teknis Indotech** melalui kanal resmi yang diberikan kepada mitra.
 
 ---
 

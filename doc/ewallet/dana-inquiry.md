@@ -1,29 +1,57 @@
-# DANA (Inquiry)
+# DANA — Inquiry → Payment (post paid)
 
-Satu halaman untuk inquiry DANA: **denom tetap** dan **denom bebas**.
+Alur **DANA with inquiry**: validasi dan rincian tagihan lewat **`POST /inquiry`**, lalu pembayaran lewat **`POST /payment`**.
 
-## Kontrak HTTP
 
-- Endpoint: `POST /inquiry`
-- Header: `Authorization: Bearer <JWT>`
-- Header: `Content-Type: application/json`
-- Referensi umum: [Inquiry POST (JSON)](../inquiry/inquiry-post.md)
+## URL & autentikasi
 
-## 1) Denom tetap
+**Base URL**
 
-`code` contoh: `DANA`
+```
+https://indotechapi.socx.app/reseller/api/v1
+```
+**Header**
+
+```
+Authorization: Bearer <JWT>
+Content-Type: application/json
+```
+
+## Format Data Payload
+
+| Field | Wajib | Keterangan |
+|-------|-------|------------|
+| `code` | Ya | Kode produk, contoh: `DANA` |
+| `idpel` | Ya | `{msisdn}#{nominal}` |
+| `request_id` | Ya | ID unik dari sisi Anda |
+
+
+Nomor tujuan dan nominal digabung dengan `#`:
+
+```
+{msisdn}#{nominal}
+```
+
+
+
+Contoh:
+
+## 1. Inquiry
+
 
 ### Request
 
-```json
-{
-  "code": "DANA",
-  "idpel": "08996647676#1000",
-  "request_id": "26032600000"
-}
+**Endpoint:** `POST {base_url}/inquiry`
+
+
+```bash
+curl -L -X POST 'https://indotechapi.socx.app/reseller/api/v1/inquiry' \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer xxxx' \
+  -d '{"code":"DANA","idpel":"08996647676#1000","request_id":"26032600000"}'
 ```
 
-### Respons sukses
+### Respons
 
 ```json
 {
@@ -44,37 +72,62 @@ Satu halaman untuk inquiry DANA: **denom tetap** dan **denom bebas**.
 }
 ```
 
-## 2) Denom bebas
 
-`code` contoh: `CDANA` / `DANA_BEBAS` (sesuai katalog).
+## 2. Payment
+
+**Endpoint:** `POST {base_url}/payment`
 
 ### Request
 
-```json
-{
-  "code": "CDANA",
-  "idpel": "082218965846#5000",
-  "request_id": "26032972396000"
-}
+| Field | Wajib | Keterangan |
+|-------|-------|------------|
+| `code` | Ya | Sama dengan inquiry, contoh: `DANA` |
+| `idpel` | Ya | Sama dengan inquiry |
+| `request_id` | Ya | ID unik **baru** untuk payment |
+
+```bash
+curl -L -X POST 'https://indotechapi.socx.app/reseller/api/v1/payment' \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer xxxx' \
+  -d '{"code":"DANA","idpel":"08996647676#1000","request_id":"26032600001"}'
 ```
 
-### Respons sukses
+### Respons
 
 ```json
 {
-  "code": "DANA_BEBAS",
-  "idpel": "082218965846#5000",
-  "request_id": "26032972396000",
-  "product_name": "DANA Denom Bebas",
-  "client_name": "DNID SANXX SUSXXXXXXX",
+  "code": "",
+  "idpel": "08996647676#1000",
+  "request_id": "26032600001",
+  "product_name": "DANA",
+  "client_name": "DNID aXX danX",
   "info": null,
   "rc": "00",
   "msg": "SUKSES",
-  "jumlah_tagihan": "1",
+  "jumlah_tagihan": "",
   "denda": "",
-  "tagihan": "5000",
-  "admin": "0",
-  "total": "5000",
-  "balance": 4412869
+  "tagihan": "",
+  "admin": "",
+  "total": "",
+  "nomor_referensi": "DNID aXX danX/628996647676/2026032610121481030100166434401355494",
+  "trx_id": 202277,
+  "balance": 29986573667,
+  "footer": "",
+  "header": "SOCX",
+  "time": "26/03/2026 19:27:54"
 }
 ```
+
+## Denom bebas
+
+Untuk produk open amount, `code` dan format `idpel` mengikuti katalog (contoh `CDANA`, `DANA_BEBAS`). Alur tetap **inquiry → payment**; lihat contoh inquiry di [Denom bebas](dana-inquiry-denom-bebas.md).
+
+## Perbedaan dengan direct purchase
+
+| Topik | DANA inquiry → payment | E-wallet direct purchase |
+|-------|------------------------|---------------------------|
+| Endpoint debit | `POST /payment` | `POST /purchase` |
+| Pra-cek | Wajib `POST /inquiry` | Tidak |
+| Field tujuan | `idpel` (`msisdn#nominal`) | `msisdn` + `code` |
+
+Direct purchase tanpa inquiry: [Ewallet Direct Purchase](../transaksi-direct/pembelian-ewallet.md).

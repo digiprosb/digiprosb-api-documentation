@@ -1,4 +1,4 @@
-# Repo: https://github.com/maulana222/socx-api-documentation
+# Repo: https://github.com/indotech-payment/socx-api-documentation
 #
 # WAJIB: jalankan MkDocs dari folder yang berisi file INI (bukan dari parent monorepo lain):
 #   cd <repo-docs> && mkdocs serve
@@ -9,7 +9,7 @@ strict: true
 site_description: Integrasi H2H Reseller Indotech — direct purchase, saldo, status, inquiry
 site_author: Indotech
 
-repo_url: https://github.com/maulana222/socx-api-documentation
+repo_url: https://github.com/indotech-payment/socx-api-documentation
 edit_uri: edit/main/doc/
 
 docs_dir: doc
@@ -71,7 +71,7 @@ nav:
       - "Top Up & Voucher": game/topup-voucher.md
   - E-wallet:
       - "Ewallet Direct Purchase": transaksi-direct/pembelian-ewallet.md
-      - "Dana (inquiry)": ewallet/dana-inquiry.md
+      - "DANA (inquiry)": ewallet/dana-inquiry.md
   - Inquiry PLN: inquiry/inquiry-pln.md
   - Referensi Teknis:
       - Cek saldo: transaksi-direct/cek-saldo.md

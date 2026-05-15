@@ -59,4 +59,4 @@ Daftar lengkap kode hasil (`rc`), pending (`68`), dan error: **[Kode respons (RC
 
 ## Catatan
 
-- Alur **DANA dengan inquiry** (`POST /inquiry` dulu) terpisah: [Ringkasan DANA](../ewallet/dana-inquiry.md).
+- Alur **DANA dengan inquiry** (`POST /inquiry` → `POST /payment`) terpisah: [DANA — Inquiry → Payment](../ewallet/dana-inquiry.md).

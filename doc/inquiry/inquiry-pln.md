@@ -3,7 +3,7 @@
 ## Request
 
 ```bash
-curl -L -X POST 'http://demoapi.socx.app/reseller/api/v1/inquiry' \
+curl -L -X POST 'https://indotechapi.socx.app/reseller/api/v1/inquiry' \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer xxxx' \
   -d '{"code":"CPLN","idpel":"121021034831","request_id":"250717000000"}'
@@ -46,8 +46,3 @@ curl -L -X POST 'http://demoapi.socx.app/reseller/api/v1/inquiry' \
   "balance": 29986594769
 }
 ```
-
-Referensi lanjutan:
-
-- [Inquiry POST (JSON)](inquiry-post.md)
-

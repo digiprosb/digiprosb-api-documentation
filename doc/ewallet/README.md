@@ -4,4 +4,5 @@
 
 ## DANA (inquiry)
 
-- [DANA (inquiry)](dana-inquiry.md) — ringkasan + denom tetap + denom bebas
+- [DANA — Inquiry → Payment](dana-inquiry.md) — alur post paid: `POST /inquiry` lalu `POST /payment`
+- [Denom tetap](dana-inquiry-denom-tetap.md) · [Denom bebas](dana-inquiry-denom-bebas.md)
