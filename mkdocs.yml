@@ -64,17 +64,13 @@ plugins:
 
 nav:
   - Beranda: index.md
-  - Persiapan integrasi: 02-persiapan-integrasi.md
-  - Introduction & Transaction Flow: introduction-transaction-flow.md
+  - Pengenalan & persiapan integrasi: 02-persiapan-integrasi.md
   - Prepaid (Pulsa, Data):
       - "Pulsa & Data": transaksi-direct/pembelian-pulsa-data.md
-      - Test Case: transaksi-direct/skenario-pengujian.md
   - Game:
       - "Top Up & Voucher": game/topup-voucher.md
-      - Test Case: transaksi-direct/skenario-pengujian.md
   - E-wallet:
       - "Ewallet Direct Purchase": transaksi-direct/pembelian-ewallet.md
-      - Test Case: transaksi-direct/skenario-pengujian.md
       - "Dana (inquiry)": ewallet/dana-inquiry.md
   - Inquiry PLN: inquiry/inquiry-pln.md
   - Referensi Teknis:

@@ -1,6 +1,6 @@
 # Transaksi — Direct purchase
 
-Bagian ini fokus pada alur **pembelian langsung** (top-up / voucher). Ringkasan alur tingkat dokumen ada di **[Introduction & Transaction Flow](../introduction-transaction-flow.md)**.
+Bagian ini fokus pada alur **pembelian langsung** (top-up / voucher). Ringkasan alur tingkat dokumen ada di **[Pengenalan & persiapan integrasi](../02-persiapan-integrasi.md#alur-transaksi)**.
 
 ## Alur disarankan
 
@@ -23,7 +23,6 @@ Bagian ini fokus pada alur **pembelian langsung** (top-up / voucher). Ringkasan 
 | [kode-respons.md](./kode-respons.md) | Tabel RC |
 | [flow-direct-purchase-without-inquiry.md](./flow-direct-purchase-without-inquiry.md) | Alur & diagram direct purchase **tanpa** inquiry |
 | [payment-with-inquiry.md](./payment-with-inquiry.md) | payment with inquiry — alur, diagram, referensi produk |
-| [skenario-pengujian.md](./skenario-pengujian.md) | Skenario QA |
 
 Deposit tiket (`/deposit_ticket`) ada di spesifikasi sumber tetapi di luar fokus **direct purchase**; dapat ditambahkan halaman terpisah jika dibutuhkan.
 

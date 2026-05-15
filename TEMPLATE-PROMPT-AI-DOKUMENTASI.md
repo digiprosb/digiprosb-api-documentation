@@ -25,7 +25,7 @@ Saya ingin kamu membuat **dokumentasi teknis** untuk proyek berikut, pola dan ku
    - `.gitignore` memasukkan folder output `site/` (dan `docs/site/` jika relevan).
 3. **README.md di dalam folder dokumentasi** (`docs/README.md` atau setara) yang menjelaskan isi folder, cara `mkdocs serve` / `mkdocs build`, dan beda antara “panduan” vs “referensi otomatis” jika ada.
 4. Isi bab **selaras dengan kode nyata**: baca `src/`, `package.json`, env yang dipakai, error yang dilempar, endpoint/path yang ada di kode — jangan mengarang perilaku yang tidak ada di implementasi.
-5. Jika ini **API / SDK**: sertakan **tabel environment variables** yang benar-benar dipakai konstruktor/config, **daftar endpoint atau method** sesuai file sumber, dan **skenario pengujian / checklist QA** ringkas.
+5. Jika ini **API / SDK**: sertakan **tabel environment variables** yang benar-benar dipakai konstruktor/config, dan **daftar endpoint atau method** sesuai file sumber.
 6. **Tanpa** menyebut merek / dokumentasi pihak ketiga sebagai acuan (kecuali saya minta).
 7. **Jangan** menulis dokumentasi tentang deploy ke GitHub Pages / `gh-pages` / CI/CD publikasi — hanya pratinjau lokal (`mkdocs serve`, `mkdocs build`).
 

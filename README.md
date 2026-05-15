@@ -2,30 +2,12 @@
 
 Repositori ini berisi **dokumentasi teknis** untuk integrasi **Host-to-Host (H2H)** antara sistem Anda dan platform **Indotech** sebagai reseller. Dokumen ditulis dalam Bahasa Indonesia dan diorganisir per **kategori produk** serta **referensi teknis** (selaras sidebar MkDocs).
 
-### Pratinjau MkDocs — jika isi halaman tidak berubah (cache)
 
-Jalankan **`mkdocs serve`** dari folder **ini** (`e:\Projects\dana\docs`, sejajar `mkdocs.yml` dan folder `doc/`). Kalau Anda sudah mengedit Markdown tetapi browser masih menampilkan versi lama (misalnya diagram yang sudah dihapus):
+### Pengenalan & persiapan integrasi
 
-1. **Hentikan** server: di terminal tempat `mkdocs serve` jalan, tekan **Ctrl+C**. Tutup juga terminal lain yang mungkin masih menjalankan MkDocs di port yang sama.
-2. **Hapus output build lalu build ulang** (PowerShell):
+- [Satu halaman: pengenalan, checklist production, alur transaksi](doc/02-persiapan-integrasi.md)
 
-```powershell
-Set-Location "e:\Projects\dana\docs"
-Remove-Item -Recurse -Force .\site -ErrorAction SilentlyContinue
-mkdocs build --clean
-mkdocs serve
-```
-
-3. Di browser: **hard refresh** (**Ctrl+F5**) atau buka situs di jendela **InPrivate/Incognito**. Pastikan URL sama dengan yang dicetak MkDocs (biasanya `http://127.0.0.1:8000/`).
-
----
-
-### Introduction & Transaction Flow
-
-- [Ringkasan alur](doc/introduction-transaction-flow.md)
-
-
-- [Ringkasan PREPAID](doc/prepaid/README.md) — request, respon, test case
+- [Ringkasan PREPAID](doc/prepaid/README.md) — request & respon
 
 ### GAME
 
@@ -43,11 +25,10 @@ mkdocs serve
 
 ### Referensi teknis
 
-- [Persiapan integrasi](doc/02-persiapan-integrasi.md)
+- [Pengenalan & persiapan integrasi](doc/02-persiapan-integrasi.md)
 - [Cek saldo](doc/transaksi-direct/cek-saldo.md) · [Pembelian Pulsa & Data](doc/transaksi-direct/pembelian-pulsa-data.md) · [Top Up & Voucher — game](doc/game/topup-voucher.md) · [Ewallet Direct Purchase](doc/transaksi-direct/pembelian-ewallet.md) · [Cek status](doc/transaksi-direct/cek-status.md)
 - [Lampiran deposit tiket](doc/appendix-deposit-ticket.md)
 - [Kode respons (RC)](doc/transaksi-direct/kode-respons.md)
-- [Skenario pengujian](doc/transaksi-direct/skenario-pengujian.md)
 
 **Beranda situs (MkDocs):** [doc/index.md](doc/index.md)
 
@@ -57,20 +38,19 @@ mkdocs serve
 
 | Area | Status | Keterangan |
 |------|--------|------------|
-| Introduction & alur transaksi | Tersedia | Direct purchase, inquiry, diagram flow |
-| PREPAID (pulsa, data) | Tersedia | Request / respon / test case |
+| Pengenalan & persiapan integrasi | Tersedia | Base URL, auth, whitelist, `request_id`, diagram alur |
+| PREPAID (pulsa, data) | Tersedia | Request & respon |
 | GAME (top-up & voucher) | Tersedia | [Top Up & Voucher](doc/game/topup-voucher.md) — satu halaman |
 | EWALLET (direct purchase, DANA inquiry) | Tersedia | Termasuk denom tetap & open amount |
 | Inquiry PLN | Tersedia | Contoh `CPLN` |
 | Direct purchase (JSON / HTTP) | Tersedia | `code`, `msisdn`, `request_id` |
 | Cek saldo · status · RC | Tersedia | `GET /saldo`, `POST /status`, tabel RC |
-| Skenario pengujian | Tersedia | Checklist QA |
 | Deposit tiket | Lampiran | Di luar fokus direct purchase |
 | Daftar harga / katalog lengkap | Menyusul | Perlu `code` resmi dari tim Indotech |
 
 ---
 
-Detail lengkap: [Pengenalan](doc/01-pengenalan.md) · [Persiapan integrasi](doc/02-persiapan-integrasi.md).
+Detail lengkap: [Pengenalan & persiapan integrasi](doc/02-persiapan-integrasi.md).
 
 ---
 
@@ -99,8 +79,9 @@ Detail lengkap: [Pengenalan](doc/01-pengenalan.md) · [Persiapan integrasi](doc/
 4. **Jika `rc = 68`:** panggil `POST /status` dengan interval wajar hingga status final (`00` atau kode gagal).
 5. **Simpan** `trxid`, `request_id`, `sn` (jika ada) untuk rekonsiliasi dan dukungan pelanggan.
 
-Alur: [Ringkasan alur](doc/introduction-transaction-flow.md) · [PREPAID — Pulsa & Data](doc/transaksi-direct/pembelian-pulsa-data.md) · [game](doc/game/README.md) · [skenario pengujian](doc/transaksi-direct/skenario-pengujian.md).
- Struktur repositori
+Alur: [Pengenalan & persiapan integrasi — bagian alur](doc/02-persiapan-integrasi.md#alur-transaksi) · [PREPAID — Pulsa & Data](doc/transaksi-direct/pembelian-pulsa-data.md) · [game](doc/game/README.md).
+
+## Struktur repositori
 
 ```
 .
@@ -110,9 +91,8 @@ Alur: [Ringkasan alur](doc/introduction-transaction-flow.md) · [PREPAID — Pul
 ├── .gitignore
 └── doc/
     ├── index.md              ← Beranda MkDocs
-    ├── introduction-transaction-flow.md
-    ├── 01-pengenalan.md
-    ├── 02-persiapan-integrasi.md
+    ├── introduction-transaction-flow.md  ← pengalihan ke 02 (tautan lama)
+    ├── 02-persiapan-integrasi.md         ← pengenalan + persiapan + alur
     ├── appendix-deposit-ticket.md
     ├── prepaid/              ← Pulsa, data
     ├── game/                 ← Top-up non-zone, zona, voucher

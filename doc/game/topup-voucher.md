@@ -1,6 +1,6 @@
 # Top Up & Voucher
 
-Purchase game (`POST /purchase`) — tiga kategori, masing-masing dengan contoh **request** dan **respons**. RC: [Kode respons (RC)](../transaksi-direct/kode-respons.md) · Uji: [Skenario pengujian](../transaksi-direct/skenario-pengujian.md).
+Purchase game (`POST /purchase`) — tiga kategori, masing-masing dengan contoh **request** dan **respons**. RC: [Kode respons (RC)](../transaksi-direct/kode-respons.md).
 
 ## Pembelian (`POST /purchase`)
 
