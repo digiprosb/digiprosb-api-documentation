@@ -1209,10 +1209,11 @@ Content-Type: application/json
 <h2 id="1-inquiry">1. Inquiry<a class="headerlink" href="#1-inquiry" title="Permanent link">&para;</a></h2>
 <h3 id="request">Request<a class="headerlink" href="#request" title="Permanent link">&para;</a></h3>
 <p><strong>Endpoint:</strong> <code>POST {base_url}/inquiry</code></p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-L<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s1">&#39;https://indotechapi.socx.app/reseller/api/v1/inquiry&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Authorization: Bearer xxxx&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;code&quot;:&quot;DANA&quot;,&quot;idpel&quot;:&quot;08996647676#1000&quot;,&quot;request_id&quot;:&quot;26032600000&quot;}&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="o">{</span>
+<span class="w">  </span><span class="s2">&quot;code&quot;</span>:<span class="s2">&quot;DANA&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;idpel&quot;</span>:<span class="s2">&quot;08996647676#1000&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;request_id&quot;</span>:<span class="s2">&quot;26032600000&quot;</span>
+<span class="o">}</span>
 </code></pre></div>
 <h3 id="respons">Respons<a class="headerlink" href="#respons" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -1235,10 +1236,11 @@ Content-Type: application/json
 <h2 id="2-payment">2. Payment<a class="headerlink" href="#2-payment" title="Permanent link">&para;</a></h2>
 <p><strong>Endpoint:</strong> <code>POST {base_url}/payment</code></p>
 <h3 id="request_1">Request<a class="headerlink" href="#request_1" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-L<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s1">&#39;https://indotechapi.socx.app/reseller/api/v1/payment&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Authorization: Bearer xxxx&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;code&quot;:&quot;DANA&quot;,&quot;idpel&quot;:&quot;08996647676#1000&quot;,&quot;request_id&quot;:&quot;26032600001&quot;}&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="o">{</span>
+<span class="w">  </span><span class="s2">&quot;code&quot;</span>:<span class="s2">&quot;DANA&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;idpel&quot;</span>:<span class="s2">&quot;08996647676#1000&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;request_id&quot;</span>:<span class="s2">&quot;26032600001&quot;</span>
+<span class="o">}</span>
 </code></pre></div>
 <h3 id="respons_1">Respons<a class="headerlink" href="#respons_1" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
