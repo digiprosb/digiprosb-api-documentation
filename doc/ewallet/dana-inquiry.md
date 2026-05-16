@@ -45,10 +45,12 @@ Contoh:
 
 
 ```bash
-curl -L -X POST 'https://indotechapi.socx.app/reseller/api/v1/inquiry' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer xxxx' \
-  -d '{"code":"DANA","idpel":"08996647676#1000","request_id":"26032600000"}'
+{
+  "code":"DANA",
+  "idpel":"08996647676#1000",
+  "request_id":"26032600000"
+}
+
 ```
 
 ### Respons
@@ -81,10 +83,11 @@ curl -L -X POST 'https://indotechapi.socx.app/reseller/api/v1/inquiry' \
 
 
 ```bash
-curl -L -X POST 'https://indotechapi.socx.app/reseller/api/v1/payment' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer xxxx' \
-  -d '{"code":"DANA","idpel":"08996647676#1000","request_id":"26032600001"}'
+{
+  "code":"DANA",
+  "idpel":"08996647676#1000",
+  "request_id":"26032600001"
+}
 ```
 
 ### Respons
