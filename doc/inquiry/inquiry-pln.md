@@ -84,37 +84,45 @@ Content-Type: application/json
 
 ```json
 {
-  "code": "CPLN",
-  "idpel": "121021034831",
-  "request_id": "250717000000",
-  "product_name": "Inquiry PLN Prabayar",
-  "client_name": "NRML~!@ $^*}?-&.PROD#TEST2",
-  "info": [
-    {
-      "name": "Nomor",
-      "value": "08102138831"
-    },
-    {
-      "name": "Nama",
-      "value": "NRML~!@ $^*}?-&.PROD#TEST2"
-    },
-    {
-      "name": "Tarif/Daya",
-      "value": "R1/900"
-    },
-    {
-      "name": "Stroom/Token Unsold",
-      "value": "0"
-    }
-  ],
-  "rc": "00",
-  "msg": "SUKSES",
-  "jumlah_tagihan": "",
-  "denda": "",
-  "tagihan": "",
-  "admin": "",
-  "total": "",
-  "balance": 29986594769
+    "code": "PLP20",
+    "idpel": "45130152445",
+    "request_id": "2223260002312300",
+    "product_name": "",
+    "client_name": "WAG**********************",
+    "info": [
+        {
+            "name": "IDPEL",
+            "value": "432560019605"
+        },
+        {
+            "name": "NAMA",
+            "value": "WAG**********************"
+        },
+        {
+            "name": "No Meter",
+            "value": "45130152445"
+        },
+        {
+            "name": "Tarif/Daya",
+            "value": "R1T/450 VA"
+        },
+        {
+            "name": "Alamat",
+            "value": "DS DAU******************************************************"
+        },
+        {
+            "name": "Tipe",
+            "value": "prepaid"
+        }
+    ],
+    "rc": "00",
+    "msg": "SUKSES",
+    "jumlah_tagihan": "0",
+    "denda": "0",
+    "tagihan": "0",
+    "admin": "0",
+    "total": "0",
+    "balance": 3429004
 }
 ```
 
