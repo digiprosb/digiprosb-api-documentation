@@ -967,10 +967,11 @@
 
 <h1 id="inquiry-pln">Inquiry PLN<a class="headerlink" href="#inquiry-pln" title="Permanent link">&para;</a></h1>
 <h2 id="request">Request<a class="headerlink" href="#request" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-L<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s1">&#39;https://indotechapi.socx.app/reseller/api/v1/inquiry&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Authorization: Bearer xxxx&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;code&quot;:&quot;CPLN&quot;,&quot;idpel&quot;:&quot;121021034831&quot;,&quot;request_id&quot;:&quot;250717000000&quot;}&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="o">{</span>
+<span class="w">    </span><span class="s2">&quot;code&quot;</span>:<span class="s2">&quot;CPLN&quot;</span>,
+<span class="w">    </span><span class="s2">&quot;idpel&quot;</span>:<span class="s2">&quot;121021034831&quot;</span>,
+<span class="w">    </span><span class="s2">&quot;request_id&quot;</span>:<span class="s2">&quot;250717000000&quot;</span>
+<span class="w">  </span><span class="o">}</span>
 </code></pre></div>
 <h2 id="response">Response<a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
