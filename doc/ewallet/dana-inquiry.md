@@ -116,7 +116,6 @@ Contoh:
 }
 ```
 
-
 ## Denom bebas
 
 Untuk produk open amount, `code` dan format `idpel` mengikuti katalog (contoh `CDANA`, `DANA_BEBAS`). Alur tetap **inquiry → payment**; lihat contoh inquiry di [Denom bebas](dana-inquiry-denom-bebas.md).

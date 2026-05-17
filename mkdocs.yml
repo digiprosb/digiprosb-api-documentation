@@ -72,7 +72,7 @@ nav:
   - E-wallet:
       - "Ewallet Direct Purchase": transaksi-direct/pembelian-ewallet.md
       - "DANA (inquiry)": ewallet/dana-inquiry.md
-  - Inquiry PLN: inquiry/inquiry-pln.md
+  - PLN Prepaid: inquiry/inquiry-pln.md
   - Referensi Teknis:
       - Cek saldo: transaksi-direct/cek-saldo.md
       - Cek status: transaksi-direct/cek-status.md
