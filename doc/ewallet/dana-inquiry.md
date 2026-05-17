@@ -94,7 +94,7 @@ Contoh:
 
 ```json
 {
-  "code": "",
+  "code": "DANA",
   "idpel": "08996647676#1000",
   "request_id": "26032600001",
   "product_name": "DANA",
@@ -115,6 +115,7 @@ Contoh:
   "time": "26/03/2026 19:27:54"
 }
 ```
+
 
 ## Denom bebas
 

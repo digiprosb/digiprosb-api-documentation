@@ -3,10 +3,11 @@
 ## Request
 
 ```bash
-curl -L -X POST 'https://indotechapi.socx.app/reseller/api/v1/inquiry' \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer xxxx' \
-  -d '{"code":"CPLN","idpel":"121021034831","request_id":"250717000000"}'
+  {
+    "code":"CPLN",
+    "idpel":"121021034831",
+    "request_id":"250717000000"
+  }
 ```
 
 ## Response
