@@ -330,17 +330,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#status-dokumen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Status dokumen
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -932,17 +921,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#status-dokumen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Status dokumen
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -983,15 +961,11 @@
 <td></td>
 </tr>
 <tr>
-<td>→ <a href="transaksi-direct/cek-saldo/">Cek saldo</a></td>
-<td><code>GET /saldo</code></td>
-</tr>
-<tr>
 <td>→ <a href="transaksi-direct/pembelian-pulsa-data/">PREPAID — Pulsa &amp; Data</a></td>
 <td><code>POST /purchase</code> prepaid: request &amp; respons</td>
 </tr>
 <tr>
-<td>→ <a href="game/topup-voucher/">Top Up &amp; Voucher — game (POST)</a></td>
+<td>→ <a href="game/topup-voucher/">Top Up &amp; Voucher</a></td>
 <td><code>POST /purchase</code> game: request, klasifikasi, respons</td>
 </tr>
 <tr>
@@ -999,16 +973,20 @@
 <td><code>POST /purchase</code> e-wallet (request &amp; respons)</td>
 </tr>
 <tr>
+<td>→ <a href="inquiry/inquiry-pln/">PLN Prepaid</a></td>
+<td><code>POST /purchase</code> PLN Direct Purchase dan Direct with Inquiry</td>
+</tr>
+<tr>
 <td>→ <a href="transaksi-direct/cek-status/">Cek status</a></td>
 <td><code>POST /status</code></td>
 </tr>
 <tr>
-<td>→ <a href="transaksi-direct/kode-respons/">Kode respons (RC)</a></td>
-<td>Tabel RC</td>
+<td>→ <a href="transaksi-direct/cek-saldo/">Cek saldo</a></td>
+<td><code>GET /saldo</code></td>
 </tr>
 <tr>
-<td><a href="inquiry/">Inquiry</a></td>
-<td><code>POST /inquiry</code> — contoh PLN prabayar (<code>CPLN</code>)</td>
+<td>→ <a href="transaksi-direct/kode-respons/">Kode respons (RC)</a></td>
+<td>Tabel RC</td>
 </tr>
 <tr>
 <td><a href="appendix-deposit-ticket/">Lampiran — deposit tiket</a></td>
@@ -1016,11 +994,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="status-dokumen">Status dokumen<a class="headerlink" href="#status-dokumen" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Siap dipakai untuk integrasi:</strong> direct purchase (JSON/HTTP), cek saldo, cek status, tabel RC — sesuai sumber internal <code>socx.md</code>.</li>
-<li><strong>Perlu review tim SOCX / API:</strong> callback setelah <code>rc = 68</code> (pending), verifikasi webhook/XML <code>topUpReport</code>, URL &amp; kontrak <strong>inquiry</strong> / daftar harga, finalisasi parameter game per <code>code</code> di tabel klasifikasi.</li>
-</ul>
 
 
 
