@@ -622,6 +622,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#url-autentikasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        URL &amp; autentikasi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#request" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -645,10 +656,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sukses-contoh-rc00" class="md-nav__link">
+  <a href="#pending-contoh-rc-68" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sukses (contoh, rc=00)
+        Pending (contoh, rc = 68)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#callback-sukses-contoh-rc-00" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Callback sukses (contoh, rc = 00)
       
     </span>
   </a>
@@ -963,6 +985,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#url-autentikasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        URL &amp; autentikasi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#request" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -986,10 +1019,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sukses-contoh-rc00" class="md-nav__link">
+  <a href="#pending-contoh-rc-68" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sukses (contoh, rc=00)
+        Pending (contoh, rc = 68)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#callback-sukses-contoh-rc-00" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Callback sukses (contoh, rc = 00)
       
     </span>
   </a>
@@ -1044,28 +1088,41 @@
 
 
 <h1 id="e-wallet-direct-purchase">E-wallet Direct Purchase<a class="headerlink" href="#e-wallet-direct-purchase" title="Permanent link">&para;</a></h1>
-<p>Transaksi e-wallet lewat <code>POST /purchase</code> — contoh <strong>request</strong>, <strong>respons sukses</strong>, dan referensi <strong>kode respons (RC)</strong>.</p>
+<p>Transaksi e-wallet lewat <code>POST /purchase</code> — contoh <strong>request</strong>, <strong>respons utama</strong>, <strong>callback sukses</strong>, dan referensi <strong>kode respons (RC)</strong>.</p>
+<h2 id="url-autentikasi">URL &amp; autentikasi<a class="headerlink" href="#url-autentikasi" title="Permanent link">&para;</a></h2>
 <p><strong>Endpoint</strong></p>
 <div class="highlight"><pre><span></span><code>https://indotechapi.socx.app/reseller/api/v1/purchase
 </code></pre></div>
 <p><strong>Header</strong></p>
-<div class="highlight"><pre><span></span><code>Authorization: Bearer &lt;JWT&gt;
-Content-Type: application/json
+<div class="highlight"><pre><span></span><code><span class="err">Authorization: Bearer &lt;JWT&gt;</span>
+<span class="err">Content-Type: application/json</span>
 </code></pre></div>
-<hr />
 <h2 id="request">Request<a class="headerlink" href="#request" title="Permanent link">&para;</a></h2>
 <p><strong>Body (JSON)</strong></p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CDANA5&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;msisdn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;085776810414&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;26032500001001&quot;</span>
+<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;260313232300&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="respons">Respons<a class="headerlink" href="#respons" title="Permanent link">&para;</a></h2>
-<h3 id="sukses-contoh-rc00">Sukses (contoh, <code>rc=00</code>)<a class="headerlink" href="#sukses-contoh-rc00" title="Permanent link">&para;</a></h3>
+<h4 id="pending-contoh-rc-68">Pending (contoh, <code>rc = 68</code>)<a class="headerlink" href="#pending-contoh-rc-68" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CDANA5&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;msisdn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;085776810414&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;260313232300&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;trxid&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3745717</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;price&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10185</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;rc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;68&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;balance&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3653</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PENDING, Transaksi sedang diproses&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Transaksi <strong>belum final</strong> saat <code>rc = 68</code>. Tunggu <strong>callback</strong> untuk hasil akhirnya.</p>
+<h3 id="callback-sukses-contoh-rc-00">Callback sukses (contoh, <code>rc = 00</code>)<a class="headerlink" href="#callback-sukses-contoh-rc-00" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;ref_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;qi46fh0jwcsp58268&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;ref_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;260313232300&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CDANA5&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;hp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;085776810414&quot;</span><span class="p">,</span>
@@ -1078,12 +1135,39 @@ Content-Type: application/json
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ref_id</code></td>
+<td>Referensi Request</td>
+</tr>
+<tr>
+<td><code>hp</code></td>
+<td>Echo nomor tujuan (<code>msisdn</code> pada request)</td>
+</tr>
+<tr>
+<td><code>tr_id</code></td>
+<td>ID transaksi di platform</td>
+</tr>
+<tr>
+<td><code>rc</code></td>
+<td><code>00</code> = sukses</td>
+</tr>
+</tbody>
+</table>
 <h3 id="rc-respons-lain">RC &amp; respons lain<a class="headerlink" href="#rc-respons-lain" title="Permanent link">&para;</a></h3>
 <p>Daftar lengkap kode hasil (<code>rc</code>), pending (<code>68</code>), dan error: <strong><a href="../kode-respons/">Kode respons (RC)</a></strong>.</p>
 <hr />
 <h2 id="catatan">Catatan<a class="headerlink" href="#catatan" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Alur <strong>DANA dengan inquiry</strong> (<code>POST /inquiry</code> → <code>POST /payment</code>) terpisah: <a href="../../ewallet/dana-inquiry/">DANA — Inquiry → Payment</a>.</li>
+<li>Hindari dobel-update status: gunakan <code>request_id</code> / <code>trxid</code> sebagai kunci idempotensi di sistem Anda.</li>
 </ul>
 
 
