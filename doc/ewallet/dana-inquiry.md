@@ -33,7 +33,6 @@ Nomor tujuan dan nominal digabung dengan `#`:
 ```
 
 
-
 Contoh:
 
 ## 1. Inquiry
@@ -46,9 +45,9 @@ Contoh:
 
 ```bash
 {
-  "code":"DANA",
-  "idpel":"08996647676#1000",
-  "request_id":"26032600000"
+ "code":"SDANA_BEBAS",
+ "idpel":"089677549508#1000",
+ "request_id":"250270202302301"
 }
 
 ```
@@ -57,20 +56,20 @@ Contoh:
 
 ```json
 {
-  "code": "DANA",
-  "idpel": "08996647676#1000",
-  "request_id": "26032600000",
-  "product_name": "DANA",
-  "client_name": "DNID aXX danX",
-  "info": null,
-  "rc": "00",
-  "msg": "SUKSES",
-  "jumlah_tagihan": "1",
-  "denda": "",
-  "tagihan": "1000",
-  "admin": "60",
-  "total": "1060",
-  "balance": 29986574717
+    "code": "DANA_BEBAS",
+    "idpel": "089677549508#1000",
+    "request_id": "25027170202302301",
+    "product_name": "DANA Denom Bebas",
+    "client_name": "DNID MAUXXXX EGXXXX",
+    "info": null,
+    "rc": "00",
+    "msg": "SUKSES",
+    "jumlah_tagihan": "1",
+    "denda": "",
+    "tagihan": "1000",
+    "admin": "85",
+    "total": "1085",
+    "balance": 2296814
 }
 ```
 
@@ -84,9 +83,9 @@ Contoh:
 
 ```bash
 {
-  "code":"DANA",
-  "idpel":"08996647676#1000",
-  "request_id":"26032600001"
+ "code":"SDANA_BEBAS",
+ "idpel":"089677549509#1000",
+ "request_id":"2578072323871"
 }
 ```
 
@@ -94,25 +93,25 @@ Contoh:
 
 ```json
 {
-  "code": "DANA",
-  "idpel": "08996647676#1000",
-  "request_id": "26032600001",
-  "product_name": "DANA",
-  "client_name": "DNID aXX danX",
-  "info": null,
-  "rc": "00",
-  "msg": "SUKSES",
-  "jumlah_tagihan": "",
-  "denda": "",
-  "tagihan": "",
-  "admin": "",
-  "total": "",
-  "nomor_referensi": "DNID aXX danX/628996647676/2026032610121481030100166434401355494",
-  "trx_id": 202277,
-  "balance": 29986573667,
-  "footer": "",
-  "header": "SOCX",
-  "time": "26/03/2026 19:27:54"
+    "code": "",
+    "idpel": "089677549508#1000",
+    "request_id": "257807232323871",
+    "product_name": "SALDO DANA BEBAS",
+    "client_name": "DNID MAUXXXX EGXXXX",
+    "info": null,
+    "rc": "00",
+    "msg": "SUKSES",
+    "jumlah_tagihan": "1",
+    "denda": "",
+    "tagihan": "1000",
+    "admin": "85",
+    "total": "1085",
+    "nomor_referensi": "DNID MAUXXXX EGXXXX/6289677549508/2026061010121481030100166091131018932",
+    "trx_id": 3745398,
+    "balance": 9793,
+    "footer": "",
+    "header": "Indotech",
+    "time": "10/06/2026 08:08:46"
 }
 ```
 
