@@ -46,7 +46,7 @@ Contoh:
 ```bash
 {
  "code":"SDANA_BEBAS",
- "idpel":"089677549508#1000",
+ "idpel":"089678549508#1000",
  "request_id":"250270202302301"
 }
 
@@ -57,7 +57,7 @@ Contoh:
 ```json
 {
     "code": "DANA_BEBAS",
-    "idpel": "089677549508#1000",
+    "idpel": "089678549508#1000",
     "request_id": "25027170202302301",
     "product_name": "DANA Denom Bebas",
     "client_name": "DNID MAUXXXX EGXXXX",
@@ -67,8 +67,8 @@ Contoh:
     "jumlah_tagihan": "1",
     "denda": "",
     "tagihan": "1000",
-    "admin": "85",
-    "total": "1085",
+    "admin": "485",
+    "total": "1485",
     "balance": 2296814
 }
 ```
@@ -84,7 +84,7 @@ Contoh:
 ```bash
 {
  "code":"SDANA_BEBAS",
- "idpel":"089677549509#1000",
+ "idpel":"089678549508#1000",
  "request_id":"2578072323871"
 }
 ```
@@ -94,7 +94,7 @@ Contoh:
 ```json
 {
     "code": "",
-    "idpel": "089677549508#1000",
+    "idpel": "089678549508#1000",
     "request_id": "257807232323871",
     "product_name": "SALDO DANA BEBAS",
     "client_name": "DNID MAUXXXX EGXXXX",
@@ -104,9 +104,9 @@ Contoh:
     "jumlah_tagihan": "1",
     "denda": "",
     "tagihan": "1000",
-    "admin": "85",
-    "total": "1085",
-    "nomor_referensi": "DNID MAUXXXX EGXXXX/6289677549508/2026061010121481030100166091131018932",
+    "admin": "485",
+    "total": "1485",
+    "nomor_referensi": "DNID MAUXXXX EGXXXX/6289678549508/2026061010121481030100166091131018932",
     "trx_id": 3745398,
     "balance": 9793,
     "footer": "",
