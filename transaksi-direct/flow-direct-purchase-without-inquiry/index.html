@@ -470,7 +470,7 @@
   <span class="md-ellipsis">
     
   
-    Top Up & Voucher
+    Topup Game & Voucher
   
 
     
@@ -920,12 +920,12 @@
 <ol>
 <li><strong>(Opsional)</strong> <a href="../cek-saldo/"><code>GET /saldo</code></a> — cek saldo sebelum transaksi besar.</li>
 <li><strong><code>POST /purchase</code></strong> — kirim <code>code</code>, <code>msisdn</code>, <code>request_id</code> unik sesuai kategori:
-   <a href="../pembelian-pulsa-data/">pulsa/data</a>, <a href="../../game/topup-voucher/">game — Top Up &amp; Voucher</a>, atau <a href="../pembelian-ewallet/">ewallet</a>.</li>
+   <a href="../pembelian-pulsa-data/">pulsa/data</a>, <a href="../../game/topup-voucher/">game — Topup Game &amp; Voucher</a>, atau <a href="../pembelian-ewallet/">ewallet</a>.</li>
 <li><strong>Baca <code>rc</code></strong> pada respons — lihat <a href="../kode-respons/">kode respons</a>.</li>
 <li>Jika <strong><code>rc = 68</code> (pending)</strong> — polling <a href="../cek-status/"><code>POST /status</code></a> hingga status final, atau tunggu callback jika sudah disepakati.</li>
 </ol>
 <h2 id="diagram-alur-referensi-dari-klasifikasi-game">Diagram alur (referensi dari klasifikasi game)<a class="headerlink" href="#diagram-alur-referensi-dari-klasifikasi-game" title="Permanent link">&para;</a></h2>
-<p>Diagram berikut sama dengan bagian <strong>Alur direct purchase (umum)</strong> di <a href="../../game/topup-voucher/#klasifikasi-produk-game">Top Up &amp; Voucher</a>: satu permintaan purchase ke Indotech, dengan cabang pending hingga hasil final dari biller.</p>
+<p>Diagram berikut sama dengan bagian <strong>Alur direct purchase (umum)</strong> di <a href="../../game/topup-voucher/#klasifikasi-produk-game">Topup Game &amp; Voucher</a>: satu permintaan purchase ke Indotech, dengan cabang pending hingga hasil final dari biller.</p>
 <pre class="mermaid"><code>sequenceDiagram
   autonumber
   participant Client as Client/Reseller
@@ -940,7 +940,7 @@
     Indotech--&gt;&gt;Client: response final (rc=00 atau gagal)
   end</code></pre>
 <h2 id="detail-produk-game-tanpa-inquiry">Detail produk game (tanpa inquiry)<a class="headerlink" href="#detail-produk-game-tanpa-inquiry" title="Permanent link">&para;</a></h2>
-<p>Parameter <code>msisdn</code>, interpretasi <code>sn</code>, dan contoh per <code>code</code> — ikuti <strong><a href="../../game/topup-voucher/">Top Up &amp; Voucher</a></strong>.</p>
+<p>Parameter <code>msisdn</code>, interpretasi <code>sn</code>, dan contoh per <code>code</code> — ikuti <strong><a href="../../game/topup-voucher/">Topup Game &amp; Voucher</a></strong>.</p>
 <h2 id="link-terkait">Link terkait<a class="headerlink" href="#link-terkait" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -952,7 +952,7 @@
 <tbody>
 <tr>
 <td>Request &amp; field respons JSON</td>
-<td><a href="../pembelian-pulsa-data/">Pembelian Pulsa &amp; Data</a>, <a href="../../game/topup-voucher/">Top Up &amp; Voucher — game</a>, <a href="../pembelian-ewallet/">Ewallet Direct Purchase</a></td>
+<td><a href="../pembelian-pulsa-data/">Pembelian Pulsa &amp; Data</a>, <a href="../../game/topup-voucher/">Topup Game &amp; Voucher</a>, <a href="../pembelian-ewallet/">Ewallet Direct Purchase</a></td>
 </tr>
 <tr>
 <td>Pending &amp; polling</td>

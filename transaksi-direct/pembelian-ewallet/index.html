@@ -474,7 +474,7 @@
   <span class="md-ellipsis">
     
   
-    Top Up & Voucher
+    Topup Game & Voucher
   
 
     
@@ -652,30 +652,19 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Respons">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#callback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Callback
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Callback">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pending-contoh-rc-68" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pending (contoh, rc = 68)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#callback-sukses-contoh-rc-00" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Callback sukses (contoh, rc = 00)
-      
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#rc-respons-lain" class="md-nav__link">
@@ -1015,30 +1004,19 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Respons">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#callback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Callback
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Callback">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pending-contoh-rc-68" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pending (contoh, rc = 68)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#callback-sukses-contoh-rc-00" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Callback sukses (contoh, rc = 00)
-      
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#rc-respons-lain" class="md-nav__link">
@@ -1088,7 +1066,7 @@
 
 
 <h1 id="e-wallet-direct-purchase">E-wallet Direct Purchase<a class="headerlink" href="#e-wallet-direct-purchase" title="Permanent link">&para;</a></h1>
-<p>Transaksi e-wallet lewat <code>POST /purchase</code> — contoh <strong>request</strong>, <strong>respons utama</strong>, <strong>callback sukses</strong>, dan referensi <strong>kode respons (RC)</strong>.</p>
+<p>Transaksi e-wallet lewat <code>POST /purchase</code> — contoh <strong>request</strong>, <strong>respons</strong>, dan <strong>callback</strong>. RC: <a href="../kode-respons/">Kode respons (RC)</a>.</p>
 <h2 id="url-autentikasi">URL &amp; autentikasi<a class="headerlink" href="#url-autentikasi" title="Permanent link">&para;</a></h2>
 <p><strong>Endpoint</strong></p>
 <div class="highlight"><pre><span></span><code>https://indotechapi.socx.app/reseller/api/v1/purchase
@@ -1106,7 +1084,6 @@
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="respons">Respons<a class="headerlink" href="#respons" title="Permanent link">&para;</a></h2>
-<h4 id="pending-contoh-rc-68">Pending (contoh, <code>rc = 68</code>)<a class="headerlink" href="#pending-contoh-rc-68" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CDANA5&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;msisdn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;085776810414&quot;</span><span class="p">,</span>
@@ -1119,7 +1096,7 @@
 <span class="p">}</span>
 </code></pre></div>
 <p>Transaksi <strong>belum final</strong> saat <code>rc = 68</code>. Tunggu <strong>callback</strong> untuk hasil akhirnya.</p>
-<h3 id="callback-sukses-contoh-rc-00">Callback sukses (contoh, <code>rc = 00</code>)<a class="headerlink" href="#callback-sukses-contoh-rc-00" title="Permanent link">&para;</a></h3>
+<h2 id="callback">Callback<a class="headerlink" href="#callback" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;ref_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;260313232300&quot;</span><span class="p">,</span>
