@@ -586,14 +586,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ewallet/dana-inquiry/" class="md-nav__link">
+      <a href="../../ewallet/e-wallet-open-amount/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    DANA (inquiry)
+    Ewallet Open Amount
   
 
     
@@ -925,7 +925,7 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>DANA</strong> (post paid)</td>
+<td><strong>E-wallet open amount</strong></td>
 <td><code>POST /payment</code> — field <code>code</code>, <code>idpel</code>, <code>request_id</code> baru</td>
 </tr>
 <tr>
@@ -934,13 +934,13 @@
 </tr>
 </tbody>
 </table>
-<p>Dipakai ketika SKU atau biller mewajibkan pre-check sebelum debit (contoh: <strong>PLN prabayar</strong>, <strong>DANA</strong>, produk lain sesuai katalog).</p>
+<p>Dipakai ketika SKU atau biller mewajibkan pre-check sebelum debit (contoh: <strong>PLN prabayar</strong>, <strong>e-wallet open amount</strong>, produk lain sesuai katalog).</p>
 <p>Request detail (payload) mengikuti kontrak SOCX/API untuk produk Anda.</p>
 <h2 id="ringkasan-langkah-integrasi">Ringkasan langkah integrasi<a class="headerlink" href="#ringkasan-langkah-integrasi" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong><code>POST /inquiry</code></strong> — kirim <code>code</code> dan field yang diminta (mis. <code>idpel</code> untuk PLN); pastikan <code>rc = 00</code> dan data tampilan (<code>info[]</code>) sesuai kebutuhan UI. Contoh: <a href="../../inquiry/inquiry-pln/">Inquiry PLN</a>, <a href="../../ewallet/dana-inquiry/">DANA</a>.</li>
-<li><strong>Debit</strong> — <code>POST /payment</code> (DANA) atau <code>POST /purchase</code> (kategori lain). Referensi:
-   <a href="../../ewallet/dana-inquiry/">DANA inquiry → payment</a>, <a href="../pembelian-pulsa-data/">pulsa/data</a>, <a href="../../game/topup-voucher/">game — Top Up &amp; Voucher</a>, <a href="../pembelian-ewallet/">ewallet direct</a>.</li>
+<li><strong><code>POST /inquiry</code></strong> — kirim <code>code</code> dan field yang diminta (mis. <code>idpel</code> untuk PLN); pastikan <code>rc = 00</code> dan data tampilan (<code>info[]</code>) sesuai kebutuhan UI. Contoh: <a href="../../inquiry/inquiry-pln/">Inquiry PLN</a>, <a href="../../ewallet/e-wallet-open-amount/">Ewallet Open Amount</a>.</li>
+<li><strong>Debit</strong> — <code>POST /payment</code> (open amount) atau <code>POST /purchase</code> (kategori lain). Referensi:
+   <a href="../../ewallet/e-wallet-open-amount/">Ewallet Open Amount</a>, <a href="../pembelian-pulsa-data/">pulsa/data</a>, <a href="../../game/topup-voucher/">game — Top Up &amp; Voucher</a>, <a href="../pembelian-ewallet/">ewallet direct</a>.</li>
 <li><strong>Baca <code>rc</code></strong> — sama dengan alur tanpa inquiry; lihat <a href="../kode-respons/">kode respons</a>.</li>
 <li>Jika <strong><code>rc = 68</code></strong> — <a href="../cek-status/"><code>POST /status</code></a> atau callback (jika ada).</li>
 </ol>
@@ -985,8 +985,8 @@
 <td><a href="../../inquiry/inquiry-pln/">Inquiry PLN</a></td>
 </tr>
 <tr>
-<td>DANA (inquiry → payment)</td>
-<td><a href="../../ewallet/dana-inquiry/">DANA — Inquiry → Payment</a></td>
+<td>E-wallet open amount (inquiry → payment)</td>
+<td><a href="../../ewallet/e-wallet-open-amount/">Ewallet Open Amount</a></td>
 </tr>
 </tbody>
 </table>
