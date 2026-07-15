@@ -1,6 +1,6 @@
 # E-wallet Direct Purchase
 
-Transaksi e-wallet lewat `POST /purchase` — contoh **request**, **respons utama**, **callback sukses**, dan referensi **kode respons (RC)**.
+Transaksi e-wallet lewat `POST /purchase` — contoh **request**, **respons**, dan **callback**. RC: [Kode respons (RC)](kode-respons.md).
 
 ## URL & autentikasi
 
@@ -31,8 +31,6 @@ Content-Type: application/json
 
 ## Respons
 
-#### Pending (contoh, `rc = 68`)
-
 ```json
 {
   "code": "CDANA5",
@@ -48,7 +46,8 @@ Content-Type: application/json
 
 Transaksi **belum final** saat `rc = 68`. Tunggu **callback** untuk hasil akhirnya.
 
-### Callback sukses (contoh, `rc = 00`)
+## Callback
+
 
 ```json
 {

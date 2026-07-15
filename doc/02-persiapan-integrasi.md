@@ -112,7 +112,7 @@ sequenceDiagram
 ### Referensi cepat
 
 - Purchase prepaid: [Pembelian Pulsa & Data](transaksi-direct/pembelian-pulsa-data.md)
-- Purchase game: [Top Up & Voucher](game/topup-voucher.md)
+- Purchase game: [Topup Game & Voucher](game/topup-voucher.md)
 - Purchase ewallet: [Ewallet Direct Purchase](transaksi-direct/pembelian-ewallet.md)
 - Inquiry PLN: [Inquiry PLN](inquiry/inquiry-pln.md)
 - E-wallet open amount (inquiry → payment): [Ewallet Open Amount](ewallet/e-wallet-open-amount.md)

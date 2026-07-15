@@ -33,5 +33,5 @@ Sama seperti API reseller lainnya:
 Setelah inquiry, lanjut ke halaman sesuai kategori:
 [Ewallet Open Amount](../ewallet/e-wallet-open-amount.md),
 [pulsa/data](../transaksi-direct/pembelian-pulsa-data.md),
-[game — Top Up & Voucher](../game/topup-voucher.md), atau
+[game — Topup Game & Voucher](../game/topup-voucher.md), atau
 [ewallet direct](../transaksi-direct/pembelian-ewallet.md).

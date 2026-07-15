@@ -12,7 +12,7 @@ Repositori ini berisi **dokumentasi teknis** untuk integrasi **Host-to-Host (H2H
 ### GAME
 
 - [Ringkasan GAME](doc/game/README.md)
-- [Top Up & Voucher](doc/game/topup-voucher.md) — pembelian, klasifikasi, contoh respons
+- [Topup Game & Voucher](doc/game/topup-voucher.md) — pembelian, klasifikasi, contoh respons
 
 ### EWALLET
 
@@ -26,7 +26,7 @@ Repositori ini berisi **dokumentasi teknis** untuk integrasi **Host-to-Host (H2H
 ### Referensi teknis
 
 - [Pengenalan & persiapan integrasi](doc/02-persiapan-integrasi.md)
-- [Cek saldo](doc/transaksi-direct/cek-saldo.md) · [Pembelian Pulsa & Data](doc/transaksi-direct/pembelian-pulsa-data.md) · [Top Up & Voucher — game](doc/game/topup-voucher.md) · [Ewallet Direct Purchase](doc/transaksi-direct/pembelian-ewallet.md) · [Cek status](doc/transaksi-direct/cek-status.md)
+- [Cek saldo](doc/transaksi-direct/cek-saldo.md) · [Pembelian Pulsa & Data](doc/transaksi-direct/pembelian-pulsa-data.md) · [Topup Game & Voucher](doc/game/topup-voucher.md) · [Ewallet Direct Purchase](doc/transaksi-direct/pembelian-ewallet.md) · [Cek status](doc/transaksi-direct/cek-status.md)
 - [Lampiran deposit tiket](doc/appendix-deposit-ticket.md)
 - [Kode respons (RC)](doc/transaksi-direct/kode-respons.md)
 
@@ -40,7 +40,7 @@ Repositori ini berisi **dokumentasi teknis** untuk integrasi **Host-to-Host (H2H
 |------|--------|------------|
 | Pengenalan & persiapan integrasi | Tersedia | Base URL, auth, whitelist, `request_id`, diagram alur |
 | PREPAID (pulsa, data) | Tersedia | Request & respon |
-| GAME (top-up & voucher) | Tersedia | [Top Up & Voucher](doc/game/topup-voucher.md) — satu halaman |
+| GAME (top-up & voucher) | Tersedia | [Topup Game & Voucher](doc/game/topup-voucher.md) — satu halaman |
 | EWALLET (direct purchase, DANA inquiry → payment) | Tersedia | `POST /inquiry` + `POST /payment`; denom tetap & bebas |
 | Inquiry PLN | Tersedia | Contoh `CPLN` |
 | Direct purchase (JSON / HTTP) | Tersedia | `code`, `msisdn`, `request_id` |

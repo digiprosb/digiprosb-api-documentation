@@ -68,7 +68,7 @@ nav:
   - Prepaid (Pulsa, Data):
       - "Pulsa & Data": transaksi-direct/pembelian-pulsa-data.md
   - Game:
-      - "Top Up & Voucher": game/topup-voucher.md
+      - "Topup Game & Voucher": game/topup-voucher.md
   - E-wallet:
       - "Ewallet Direct Purchase": transaksi-direct/pembelian-ewallet.md
       - "Ewallet Open Amount": ewallet/e-wallet-open-amount.md
