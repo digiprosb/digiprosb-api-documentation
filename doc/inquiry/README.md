@@ -7,7 +7,7 @@ Bagian ini mendokumentasikan endpoint **inquiry** (cek data pelanggan / informas
 | Halaman | Keterangan |
 |---------|------------|
 | [Inquiry PLN](inquiry-pln.md) | `POST /inquiry` — contoh **PLN Prabayar** (`CPLN`), request & response |
-| [DANA — Inquiry → Payment](../ewallet/dana-inquiry.md) | `POST /inquiry` lalu `POST /payment` |
+| [Ewallet Open Amount](../ewallet/e-wallet-open-amount.md) | `POST /inquiry` lalu `POST /payment` |
 
 ## Autentikasi & jaringan
 
@@ -31,7 +31,7 @@ Sama seperti API reseller lainnya:
 ## Link ke transaksi
 
 Setelah inquiry, lanjut ke halaman sesuai kategori:
-[DANA](../ewallet/dana-inquiry.md),
+[Ewallet Open Amount](../ewallet/e-wallet-open-amount.md),
 [pulsa/data](../transaksi-direct/pembelian-pulsa-data.md),
 [game — Top Up & Voucher](../game/topup-voucher.md), atau
 [ewallet direct](../transaksi-direct/pembelian-ewallet.md).

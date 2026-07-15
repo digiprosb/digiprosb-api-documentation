@@ -2,7 +2,7 @@
 
 Contoh **denom tetap** (`code`: `DANA`, `idpel`: `{msisdn}#{nominal}`) ada di halaman utama alur lengkap:
 
-**[DANA — Inquiry → Payment (post paid)](dana-inquiry.md)**
+**[Ewallet Open Amount](e-wallet-open-amount.md)**
 
 Ringkasan inquiry saja (tanpa langkah payment):
 

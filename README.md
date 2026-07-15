@@ -17,7 +17,7 @@ Repositori ini berisi **dokumentasi teknis** untuk integrasi **Host-to-Host (H2H
 ### EWALLET
 
 - [Ringkasan EWALLET](doc/ewallet/README.md)
-- [DANA — inquiry → payment](doc/ewallet/dana-inquiry.md)
+- [Ewallet Open Amount](doc/ewallet/e-wallet-open-amount.md)
 
 ### Inquiry khusus
 

@@ -82,5 +82,5 @@ Daftar lengkap kode hasil (`rc`), pending (`68`), dan error: **[Kode respons (RC
 
 ## Catatan
 
-- Alur **DANA dengan inquiry** (`POST /inquiry` → `POST /payment`) terpisah: [DANA — Inquiry → Payment](../ewallet/dana-inquiry.md).
+- Alur **e-wallet open amount** (`POST /inquiry` → `POST /payment`) terpisah: [Ewallet Open Amount](../ewallet/e-wallet-open-amount.md).
 - Hindari dobel-update status: gunakan `request_id` / `trxid` sebagai kunci idempotensi di sistem Anda.

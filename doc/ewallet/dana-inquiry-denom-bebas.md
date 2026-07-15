@@ -31,6 +31,6 @@ Contoh respons:
 }
 ```
 
-Setelah inquiry sukses, lanjut **`POST /payment`** dengan `code` / `idpel` yang sama dan `request_id` baru — lihat [DANA — Inquiry → Payment](dana-inquiry.md).
+Setelah inquiry sukses, lanjut **`POST /payment`** dengan `code` / `idpel` yang sama dan `request_id` baru — lihat [Ewallet Open Amount](e-wallet-open-amount.md).
 
 Lihat juga: [Denom tetap](dana-inquiry-denom-tetap.md)

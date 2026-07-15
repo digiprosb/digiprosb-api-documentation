@@ -1,6 +1,6 @@
-# DANA — Inquiry → Payment (post paid)
+# Ewallet Open Amount
 
-Alur **DANA with inquiry**: validasi dan rincian tagihan lewat **`POST /inquiry`**, lalu pembayaran lewat **`POST /payment`**.
+Alur **e-wallet open amount** (inquiry → payment): validasi dan rincian tagihan lewat **`POST /inquiry`**, lalu pembayaran lewat **`POST /payment`**.
 
 
 ## URL & autentikasi
@@ -121,8 +121,8 @@ Untuk produk open amount, `code` dan format `idpel` mengikuti katalog (contoh `C
 
 ## Perbedaan dengan direct purchase
 
-| Topik | DANA inquiry → payment | E-wallet direct purchase |
-|-------|------------------------|---------------------------|
+| Topik | E-wallet open amount | E-wallet direct purchase |
+|-------|----------------------|---------------------------|
 | Endpoint debit | `POST /payment` | `POST /purchase` |
 | Pra-cek | Wajib `POST /inquiry` | Tidak |
 | Field tujuan | `idpel` (`msisdn#nominal`) | `msisdn` + `code` |

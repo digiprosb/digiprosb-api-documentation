@@ -115,4 +115,4 @@ sequenceDiagram
 - Purchase game: [Top Up & Voucher](game/topup-voucher.md)
 - Purchase ewallet: [Ewallet Direct Purchase](transaksi-direct/pembelian-ewallet.md)
 - Inquiry PLN: [Inquiry PLN](inquiry/inquiry-pln.md)
-- DANA (inquiry → payment): [DANA — Inquiry → Payment](ewallet/dana-inquiry.md)
+- E-wallet open amount (inquiry → payment): [Ewallet Open Amount](ewallet/e-wallet-open-amount.md)
