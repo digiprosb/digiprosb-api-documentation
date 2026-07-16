@@ -50,13 +50,15 @@ Untuk **`POST /purchase`** dan **`POST /status`**, body respons memakai **JSON**
 }
 ```
 
-### Contoh — gagal (RC 23, saldo dikembalikan)
+### Contoh — gagal jadi gagal (RC 23)
+
+Transaksi gagal final di biller; saldo deposit dikembalikan (`balance` kembali seperti sebelum pemotongan). Berbeda dengan `rc = 68` (pending), status ini tidak berubah lagi.
 
 ```json
 {
   "code": "CTSEL5",
   "msisdn": "08121231231",
-  "request_id": "999999",
+  "request_id": "99832748999",
   "rc": "23",
   "trxid": 16413,
   "price": 5400,
