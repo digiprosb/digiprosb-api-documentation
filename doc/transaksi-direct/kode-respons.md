@@ -50,27 +50,34 @@ Untuk **`POST /purchase`** dan **`POST /status`**, body respons memakai **JSON**
 }
 ```
 
-### Contoh — gagal (`rc ≠ 00` dan bukan pending)
+### Contoh — gagal (RC 23, saldo dikembalikan)
 
 ```json
 {
   "code": "CTSEL5",
-  "msisdn": "08100000000",
-  "request_id": "PULSA-20250322-0002",
-  "rc": "07",
-  "trxid": 0,
-  "price": 0,
+  "msisdn": "08121231231",
+  "request_id": "999999",
+  "rc": "23",
+  "trxid": 16413,
+  "price": 5400,
   "balance": 341890000,
   "sn": "",
-  "message": "Nomor pelanggan tidak ditemukan"
+  "message": "GAGAL, transaksi gagal di biller"
 }
 ```
 
-## Daftar kode RC
+## Catatan
 
+- Koneksi ditahan maksimal 120 detik. Konfigurasikan HTTP client Anda dengan timeout minimal 130 detik.
+- Jika transaksi langsung gagal sebelum pending (saldo tidak cukup, produk tutup, dll), response dikembalikan segera.
+- Jika terjadi timeout (RC `68`), gunakan API [Cek status](cek-status.md) untuk mengecek status akhir.
+- Maksimal 50 koneksi sync aktif per reseller. Jika melebihi, server return RC `68` dengan pesan informatif.
+
+## Daftar kode RC
+ 
 | RC | Keterangan | Status |
 |----|------------|--------|
-| `00` | Transaksi sukses | Berhasil |
+| `00` | SUKSES | Berhasil |
 | `01` | Invalid payload | Gagal |
 | `02` | Invalid authorization | Gagal |
 | `03` | Transaksi timeout | Gagal |
@@ -90,15 +97,34 @@ Untuk **`POST /purchase`** dan **`POST /status`**, body respons memakai **JSON**
 | `21` | Refund | Gagal |
 | `22` | Produk sementara ditutup | Gagal |
 | `23` | Gagal biller | Gagal |
+| `24` | Provider sedang gangguan, silakan coba beberapa saat lagi | Gagal |
+| `25` | Produk tidak terdaftar di grup reseller | Gagal |
 | `35` | System cut off in progress | Gagal |
 | `36` | Akun mencapai batas maksimal limit provider | Gagal |
 | `68` | Transaksi pending, menunggu callback | **Pending** |
 | `70` | Gagal biller | Gagal |
-| `75` | Gagal | Gagal |
+| `71` | Akun disuspend | Gagal |
+| `72` | Batas transaksi harian tercapai | Gagal |
+| `73` | Produk bukan PPOB | Gagal |
+| `74` | Produk belum disetting | Gagal |
+| `75` | Produk sedang gangguan | Gagal |
+| `76` | Transaksi tidak ditemukan | Gagal |
+| `77` | Nomor tujuan tidak diizinkan | Gagal |
+| `78` | Produk ini hanya bisa dibeli menggunakan saldo unit (mode=unit) | Gagal |
+| `79` | [API v2] payment_ref kadaluarsa — silakan inquiry ulang | Gagal |
+| `80` | [API v2] Nominal tagihan berubah sejak inquiry — payment_ref hangus, inquiry ulang (saldo tidak terpotong) | Gagal |
+| `81` | [API v2] payment_ref sudah dipakai payment lain (single-use) | Gagal |
+| `100` | Tagihan sudah terbayar | Gagal |
+| `101` | Tidak ada tagihan | Gagal |
+| `102` | Nomor tidak valid | Gagal |
+| `114` | [PLN] IDPEL yang anda masukkan salah, mohon teliti kembali. | Gagal |
+| `115` | [PLN] Nomor meter yang anda masukkan salah, mohon teliti kembali. | Gagal |
+| `177` | [PLN] Nomor pelanggan diblokir | Gagal |
+| `241` | [PLN] Pembelian minimal Rp. 20 ribu | Gagal |
+| `247` | [PLN] Total KWH melebihi batas maksimum | Gagal |
+| `268` | [PLN] Transaksi gagal | Gagal |
+| `290` | [PLN] Sedang berlangsung proses cutoff, silahkan coba beberapa saat kemudian | Gagal |
+| `293` | [PLN] Transaksi gagal | Gagal |
 
-## Catatan implementasi
 
-- **`68`**: anggap transaksi **belum final**; lanjutkan dengan [cek status](./cek-status.md) dan/atau callback (kontrak callback perlu dikonfirmasi oleh tim API).
-- **`00`**: simpan `sn` jika ada sebagai bukti ke pelanggan.
-- **`18`**: cek [cek saldo](./cek-saldo.md) sebelum retry.
 
