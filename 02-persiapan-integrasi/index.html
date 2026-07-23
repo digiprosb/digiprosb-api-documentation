@@ -772,7 +772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../transaksi-direct/pembelian-ewallet/" class="md-nav__link">
+      <a href="../ewallet/ewallet-direct-purchase/" class="md-nav__link">
         
   
   
@@ -835,7 +835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../inquiry/inquiry-pln/" class="md-nav__link">
+      <a href="../pln-prepaid/" class="md-nav__link">
         
   
   
@@ -1291,8 +1291,9 @@
 <ol>
 <li>(Opsional) <code>GET /saldo</code></li>
 <li><code>POST /purchase</code></li>
-<li>Cek <code>rc</code> di respons</li>
-<li>Jika <code>rc=68</code>, lanjut <code>POST /status</code> sampai final</li>
+<li>Server Digiprosb merespons <strong>pending</strong> (<code>rc=68</code>) pada request pertama</li>
+<li>Setelah merespons pending, Digiprosb meneruskan request ke biller/provider</li>
+<li>Saat biller mengembalikan hasil final, Digiprosb mengirim hasil final ke Client/Reseller dalam bentuk <strong>callback</strong></li>
 </ol>
 <pre class="mermaid"><code>sequenceDiagram
   autonumber
@@ -1301,14 +1302,10 @@
   participant Biller as Biller/Provider
 
   Client-&gt;&gt;Digiprosb: POST /purchase (code, msisdn, request_id)
-  alt Pending (rc=68)
-    Digiprosb-&gt;&gt;Biller: proses transaksi
-    Digiprosb--&gt;&gt;Client: pending
-    Biller--&gt;&gt;Digiprosb: hasil final
-    Digiprosb--&gt;&gt;Client: final (00 / gagal)
-  else Langsung final
-    Digiprosb--&gt;&gt;Client: final (00 / gagal)
-  end</code></pre>
+  Digiprosb--&gt;&gt;Client: pending (rc=68)
+  Digiprosb-&gt;&gt;Biller: request transaksi
+  Biller--&gt;&gt;Digiprosb: hasil final
+  Digiprosb--&gt;&gt;Client: callback final (rc=00 / gagal)</code></pre>
 <h3 id="payment-dengan-inquiry">Payment dengan inquiry<a class="headerlink" href="#payment-dengan-inquiry" title="Permanent link">&para;</a></h3>
 <p>Dipakai saat produk butuh validasi dulu (contoh: PLN, DANA — lalu <code>POST /payment</code>).</p>
 <ol>
@@ -1337,8 +1334,8 @@
 <ul>
 <li>Purchase prepaid: <a href="../transaksi-direct/pembelian-pulsa-data/">Pembelian Pulsa &amp; Data</a></li>
 <li>Purchase game: <a href="../game/topup-voucher/">Topup Game &amp; Voucher</a></li>
-<li>Purchase ewallet: <a href="../transaksi-direct/pembelian-ewallet/">Ewallet Direct Purchase</a></li>
-<li>Inquiry PLN: <a href="../inquiry/inquiry-pln/">Inquiry PLN</a></li>
+<li>Purchase ewallet: <a href="../ewallet/ewallet-direct-purchase/">Ewallet Direct Purchase</a></li>
+<li>PLN Prepaid: <a href="../pln-prepaid/">PLN Prepaid</a></li>
 <li>E-wallet open amount (inquiry → payment): <a href="../ewallet/e-wallet-open-amount/">Ewallet Open Amount</a></li>
 </ul>
 
