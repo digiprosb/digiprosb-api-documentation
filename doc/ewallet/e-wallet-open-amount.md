@@ -32,6 +32,7 @@ Nomor tujuan dan nominal digabung dengan `#`:
 {msisdn}#{nominal}
 ```
 
+**Harga:** nominal topup **+ 700** (biaya admin).
 
 Contoh:
 
@@ -67,8 +68,8 @@ Contoh:
     "jumlah_tagihan": "1",
     "denda": "",
     "tagihan": "1000",
-    "admin": "485",
-    "total": "1485",
+    "admin": "700",
+    "total": "1700",
     "balance": 2296814
 }
 ```
@@ -104,8 +105,8 @@ Contoh:
     "jumlah_tagihan": "1",
     "denda": "",
     "tagihan": "1000",
-    "admin": "485",
-    "total": "1485",
+    "admin": "700",
+    "total": "1700",
     "nomor_referensi": "DNID MAUXXXX EGXXXX/6289678549508/2026061010121481030100166091131018932",
     "trx_id": 3745398,
     "balance": 9793,
@@ -127,4 +128,4 @@ Untuk produk open amount, `code` dan format `idpel` mengikuti katalog (contoh `C
 | Pra-cek | Wajib `POST /inquiry` | Tidak |
 | Field tujuan | `idpel` (`msisdn#nominal`) | `msisdn` + `code` |
 
-Direct purchase tanpa inquiry: [Ewallet Direct Purchase](../transaksi-direct/pembelian-ewallet.md).
+Direct purchase tanpa inquiry: [Ewallet Direct Purchase](ewallet-direct-purchase.md).

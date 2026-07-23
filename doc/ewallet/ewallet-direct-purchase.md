@@ -1,6 +1,6 @@
-# E-wallet Direct Purchase
+# Ewallet Direct Purchase
 
-Transaksi e-wallet lewat `POST /purchase` — contoh **request**, **respons**, dan **callback**. RC: [Kode respons (RC)](kode-respons.md).
+Transaksi e-wallet lewat `POST /purchase` — contoh **request**, **respons**, dan **callback**. RC: [Kode respons (RC)](../transaksi-direct/kode-respons.md).
 
 ## URL & autentikasi
 
@@ -75,11 +75,11 @@ Transaksi **belum final** saat `rc = 68`. Tunggu **callback** untuk hasil akhirn
 
 ### RC & respons lain
 
-Daftar lengkap kode hasil (`rc`), pending (`68`), dan error: **[Kode respons (RC)](kode-respons.md)**.
+Daftar lengkap kode hasil (`rc`), pending (`68`), dan error: **[Kode respons (RC)](../transaksi-direct/kode-respons.md)**.
 
 ---
 
 ## Catatan
 
-- Alur **e-wallet open amount** (`POST /inquiry` → `POST /payment`) terpisah: [Ewallet Open Amount](../ewallet/e-wallet-open-amount.md).
+- Alur **e-wallet open amount** (`POST /inquiry` → `POST /payment`) terpisah: [Ewallet Open Amount](e-wallet-open-amount.md).
 - Hindari dobel-update status: gunakan `request_id` / `trxid` sebagai kunci idempotensi di sistem Anda.

@@ -1,6 +1,6 @@
 # EWALLET
 
-- [Ewallet Direct Purchase](../transaksi-direct/pembelian-ewallet.md) — request, respons, tautan RC
+- [Ewallet Direct Purchase](ewallet-direct-purchase.md) — request, respons, tautan RC
 
 ## Open amount (inquiry)
 

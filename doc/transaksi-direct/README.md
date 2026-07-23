@@ -8,7 +8,7 @@ Bagian ini fokus pada alur **pembelian langsung** (top-up / voucher). Ringkasan 
 2. **Purchase** — pilih satu jalur:
    - [`POST /purchase` pulsa/data](./pembelian-pulsa-data.md)
    - [`POST /purchase` game — Topup Game & Voucher](../game/topup-voucher.md)
-   - [Ewallet Direct Purchase](./pembelian-ewallet.md)
+   - [Ewallet Direct Purchase](../ewallet/ewallet-direct-purchase.md)
 3. Jika `rc = 68` (**pending**): polling [`POST /status`](./cek-status.md) sampai final, atau tunggu **callback** (kontrak callback perlu dikonfirmasi — lihat contoh pending di [PREPAID — Pulsa & Data](./pembelian-pulsa-data.md)).
 
 ## Isi folder
@@ -18,7 +18,7 @@ Bagian ini fokus pada alur **pembelian langsung** (top-up / voucher). Ringkasan 
 | [cek-saldo.md](./cek-saldo.md) | GET saldo |
 | [pembelian-pulsa-data.md](./pembelian-pulsa-data.md) | PREPAID — Pulsa & Data: request & respons |
 | [../game/topup-voucher.md](../game/topup-voucher.md) | Game: Topup Game & Voucher — purchase, klasifikasi, contoh respons |
-| [pembelian-ewallet.md](./pembelian-ewallet.md) | Ewallet Direct Purchase — request, respons, RC |
+| [Ewallet Direct Purchase](../ewallet/ewallet-direct-purchase.md) | Ewallet Direct Purchase — request, respons, RC |
 | [cek-status.md](./cek-status.md) | POST status |
 | [kode-respons.md](./kode-respons.md) | Tabel RC |
 | [flow-direct-purchase-without-inquiry.md](./flow-direct-purchase-without-inquiry.md) | Alur & diagram direct purchase **tanpa** inquiry |

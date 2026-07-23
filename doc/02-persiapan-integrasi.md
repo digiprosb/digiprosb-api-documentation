@@ -60,8 +60,9 @@ Dipakai saat produk tidak butuh pre-check.
 
 1. (Opsional) `GET /saldo`
 2. `POST /purchase`
-3. Cek `rc` di respons
-4. Jika `rc=68`, lanjut `POST /status` sampai final
+3. Server Digiprosb merespons **pending** (`rc=68`) pada request pertama
+4. Setelah merespons pending, Digiprosb meneruskan request ke biller/provider
+5. Saat biller mengembalikan hasil final, Digiprosb mengirim hasil final ke Client/Reseller dalam bentuk **callback**
 
 ```mermaid
 sequenceDiagram
@@ -71,14 +72,10 @@ sequenceDiagram
   participant Biller as Biller/Provider
 
   Client->>Digiprosb: POST /purchase (code, msisdn, request_id)
-  alt Pending (rc=68)
-    Digiprosb->>Biller: proses transaksi
-    Digiprosb-->>Client: pending
-    Biller-->>Digiprosb: hasil final
-    Digiprosb-->>Client: final (00 / gagal)
-  else Langsung final
-    Digiprosb-->>Client: final (00 / gagal)
-  end
+  Digiprosb-->>Client: pending (rc=68)
+  Digiprosb->>Biller: request transaksi
+  Biller-->>Digiprosb: hasil final
+  Digiprosb-->>Client: callback final (rc=00 / gagal)
 ```
 
 ### Payment dengan inquiry
@@ -113,6 +110,6 @@ sequenceDiagram
 
 - Purchase prepaid: [Pembelian Pulsa & Data](transaksi-direct/pembelian-pulsa-data.md)
 - Purchase game: [Topup Game & Voucher](game/topup-voucher.md)
-- Purchase ewallet: [Ewallet Direct Purchase](transaksi-direct/pembelian-ewallet.md)
-- Inquiry PLN: [Inquiry PLN](inquiry/inquiry-pln.md)
+- Purchase ewallet: [Ewallet Direct Purchase](ewallet/ewallet-direct-purchase.md)
+- PLN Prepaid: [PLN Prepaid](pln-prepaid.md)
 - E-wallet open amount (inquiry → payment): [Ewallet Open Amount](ewallet/e-wallet-open-amount.md)

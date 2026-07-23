@@ -2,35 +2,38 @@
 
 Repositori ini berisi **dokumentasi teknis** untuk integrasi **Host-to-Host (H2H)** antara sistem Anda dan platform **Digiprosb** sebagai reseller. Dokumen ditulis dalam Bahasa Indonesia dan diorganisir per **kategori produk** serta **referensi teknis** (selaras sidebar MkDocs).
 
+**Dokumentasi online:** https://digiprosb.github.io/digiprosb-api-documentation/
+
 
 ### Pengenalan & persiapan integrasi
 
-- [Satu halaman: pengenalan, checklist production, alur transaksi](doc/02-persiapan-integrasi.md)
+- [ pengenalan, checklist production, alur transaksi](doc/02-persiapan-integrasi.md)
 
-- [Ringkasan PREPAID](doc/prepaid/README.md) — request & respon
+- [Ringkasan PREPAID](doc/prepaid/README.md) 
 
 ### GAME
 
 - [Ringkasan GAME](doc/game/README.md)
-- [Topup Game & Voucher](doc/game/topup-voucher.md) — pembelian, klasifikasi, contoh respons
+- [Topup Game & Voucher](doc/game/topup-voucher.md) 
 
 ### EWALLET
 
 - [Ringkasan EWALLET](doc/ewallet/README.md)
+- [E-wallet Direct Purchase](doc/ewallet/ewallet-direct-purchase.md)
 - [Ewallet Open Amount](doc/ewallet/e-wallet-open-amount.md)
 
 ### Inquiry khusus
 
-- [Inquiry PLN (`CPLN`)](doc/inquiry/inquiry-pln.md)
+- [PLN Prepaid](doc/pln-prepaid.md)
 
 ### Referensi teknis
 
 - [Pengenalan & persiapan integrasi](doc/02-persiapan-integrasi.md)
-- [Cek saldo](doc/transaksi-direct/cek-saldo.md) · [Pembelian Pulsa & Data](doc/transaksi-direct/pembelian-pulsa-data.md) · [Topup Game & Voucher](doc/game/topup-voucher.md) · [Ewallet Direct Purchase](doc/transaksi-direct/pembelian-ewallet.md) · [Cek status](doc/transaksi-direct/cek-status.md)
+- [Cek saldo](doc/transaksi-direct/cek-saldo.md) · [Pembelian Pulsa & Data](doc/transaksi-direct/pembelian-pulsa-data.md) · [Topup Game & Voucher](doc/game/topup-voucher.md) · [Ewallet Direct Purchase](doc/ewallet/ewallet-direct-purchase.md) · [Cek status](doc/transaksi-direct/cek-status.md)
 - [Lampiran deposit tiket](doc/appendix-deposit-ticket.md)
 - [Kode respons (RC)](doc/transaksi-direct/kode-respons.md)
 
-**Beranda situs (MkDocs):** [doc/index.md](doc/index.md)
+**Beranda situs (MkDocs):** [doc/index.md](doc/index.md) · [https://digiprosb.github.io/digiprosb-api-documentation/](https://digiprosb.github.io/digiprosb-api-documentation/)
 
 ---
 
@@ -42,7 +45,7 @@ Repositori ini berisi **dokumentasi teknis** untuk integrasi **Host-to-Host (H2H
 | PREPAID (pulsa, data) | Tersedia | Request & respon |
 | GAME (top-up & voucher) | Tersedia | [Topup Game & Voucher](doc/game/topup-voucher.md) — satu halaman |
 | EWALLET (direct purchase, DANA inquiry → payment) | Tersedia | `POST /inquiry` + `POST /payment`; denom tetap & bebas |
-| Inquiry PLN | Tersedia | Contoh `CPLN` |
+| PLN Prepaid | Tersedia | Contoh `CPLN` |
 | Direct purchase (JSON / HTTP) | Tersedia | `code`, `msisdn`, `request_id` |
 | Cek saldo · status · RC | Tersedia | `GET /saldo`, `POST /status`, tabel RC |
 | Deposit tiket | Lampiran | Di luar fokus direct purchase |
@@ -61,7 +64,7 @@ Detail lengkap: [Pengenalan & persiapan integrasi](doc/02-persiapan-integrasi.md
 | `GET` | `/saldo` | Cek saldo deposit | [doc/transaksi-direct/cek-saldo.md](doc/transaksi-direct/cek-saldo.md) |
 | `POST` | `/purchase` | Transaksi pembelian kategori prepaid | [doc/transaksi-direct/pembelian-pulsa-data.md](doc/transaksi-direct/pembelian-pulsa-data.md) |
 | `POST` | `/purchase` | Transaksi pembelian kategori game | [doc/game/topup-voucher.md](doc/game/topup-voucher.md) |
-| `POST` | `/purchase` | Ewallet Direct Purchase | [doc/transaksi-direct/pembelian-ewallet.md](doc/transaksi-direct/pembelian-ewallet.md) |
+| `POST` | `/purchase` | Ewallet Direct Purchase | [doc/ewallet/ewallet-direct-purchase.md](doc/ewallet/ewallet-direct-purchase.md) |
 | `POST` | `/status` | Cek status by `request_id` | [doc/transaksi-direct/cek-status.md](doc/transaksi-direct/cek-status.md) |
 | `POST` | `/deposit_ticket` | Buat tiket deposit | [doc/appendix-deposit-ticket.md](doc/appendix-deposit-ticket.md) |
 
@@ -85,21 +88,21 @@ Alur: [Pengenalan & persiapan integrasi — bagian alur](doc/02-persiapan-integr
 
 ```
 .
-├── README.md                 ← Pengantar repositori (Anda di sini)
-├── mkdocs.yml                ← Navigasi situs (Material)
+├── README.md          
+├── mkdocs.yml               
 ├── requirements-docs.txt
 ├── .gitignore
 └── doc/
     ├── index.md              ← Beranda MkDocs
-    ├── introduction-transaction-flow.md  ← pengalihan ke 02 (tautan lama)
-    ├── 02-persiapan-integrasi.md         ← pengenalan + persiapan + alur
+    ├── introduction-transaction-flow.md  
+    ├── 02-persiapan-integrasi.md     
     ├── appendix-deposit-ticket.md
     ├── prepaid/              ← Pulsa, data
     ├── game/                 ← Top-up non-zone, zona, voucher
     ├── ewallet/              ← Direct purchase + DANA inquiry
     ├── inquiry/
-    │   ├── README.md
-    │   └── inquiry-pln.md    ← Contoh CPLN
+    │   └── README.md
+    ├── pln-prepaid.md        ← PLN Prepaid
     └── transaksi-direct/     ← Purchase, saldo, status, RC, klasifikasi game
 ```
 

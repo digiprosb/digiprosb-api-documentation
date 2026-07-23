@@ -4,7 +4,7 @@ Kode `rc` pada respons JSON menggambarkan hasil transaksi.
 
 ## Payload respons (JSON)
 
-Untuk **`POST /purchase`** dan **`POST /status`**, body respons memakai **JSON** dengan field umum berikut. Nilai konkret (mis. `message`, `sn`) mengikuti produk dan skenario; lihat juga [PREPAID — Pulsa & Data](./pembelian-pulsa-data.md), [Topup Game & Voucher](../game/topup-voucher.md), dan [pembelian ewallet](./pembelian-ewallet.md).
+Untuk **`POST /purchase`** dan **`POST /status`**, body respons memakai **JSON** dengan field umum berikut. Nilai konkret (mis. `message`, `sn`) mengikuti produk dan skenario; lihat juga [PREPAID — Pulsa & Data](./pembelian-pulsa-data.md), [Topup Game & Voucher](../game/topup-voucher.md), dan [pembelian ewallet](../ewallet/ewallet-direct-purchase.md).
 
 | Field | Tipe | Keterangan |
 |-------|------|------------|

@@ -73,9 +73,9 @@ nav:
   - Game:
       - "Topup Game & Voucher": game/topup-voucher.md
   - E-wallet:
-      - "Ewallet Direct Purchase": transaksi-direct/pembelian-ewallet.md
+      - "Ewallet Direct Purchase": ewallet/ewallet-direct-purchase.md
       - "Ewallet Open Amount": ewallet/e-wallet-open-amount.md
-  - PLN Prepaid: inquiry/inquiry-pln.md
+  - PLN Prepaid: pln-prepaid.md
   - Referensi Teknis:
       - Cek saldo: transaksi-direct/cek-saldo.md
       - Cek status: transaksi-direct/cek-status.md

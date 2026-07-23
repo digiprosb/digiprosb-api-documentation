@@ -6,7 +6,7 @@ Bagian ini mendokumentasikan endpoint **inquiry** (cek data pelanggan / informas
 
 | Halaman | Keterangan |
 |---------|------------|
-| [Inquiry PLN](inquiry-pln.md) | `POST /inquiry` — contoh **PLN Prabayar** (`CPLN`), request & response |
+| [PLN Prepaid](../pln-prepaid.md) | `POST /inquiry` — contoh **PLN Prabayar** (`CPLN`), request & response |
 | [Ewallet Open Amount](../ewallet/e-wallet-open-amount.md) | `POST /inquiry` lalu `POST /payment` |
 
 ## Autentikasi & jaringan
@@ -34,4 +34,4 @@ Setelah inquiry, lanjut ke halaman sesuai kategori:
 [Ewallet Open Amount](../ewallet/e-wallet-open-amount.md),
 [pulsa/data](../transaksi-direct/pembelian-pulsa-data.md),
 [game — Topup Game & Voucher](../game/topup-voucher.md), atau
-[ewallet direct](../transaksi-direct/pembelian-ewallet.md).
+[ewallet direct](../ewallet/ewallet-direct-purchase.md).

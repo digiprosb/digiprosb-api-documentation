@@ -13,9 +13,9 @@ Request detail (payload) mengikuti kontrak SOCX/API untuk produk Anda.
 
 ## Ringkasan langkah integrasi
 
-1. **`POST /inquiry`** — kirim `code` dan field yang diminta (mis. `idpel` untuk PLN); pastikan `rc = 00` dan data tampilan (`info[]`) sesuai kebutuhan UI. Contoh: [Inquiry PLN](../inquiry/inquiry-pln.md), [Ewallet Open Amount](../ewallet/e-wallet-open-amount.md).
+1. **`POST /inquiry`** — kirim `code` dan field yang diminta (mis. `idpel` untuk PLN); pastikan `rc = 00` dan data tampilan (`info[]`) sesuai kebutuhan UI. Contoh: [PLN Prepaid](../pln-prepaid.md), [Ewallet Open Amount](../ewallet/e-wallet-open-amount.md).
 2. **Debit** — `POST /payment` (open amount) atau `POST /purchase` (kategori lain). Referensi:
-   [Ewallet Open Amount](../ewallet/e-wallet-open-amount.md), [pulsa/data](pembelian-pulsa-data.md), [game — Topup Game & Voucher](../game/topup-voucher.md), [ewallet direct](pembelian-ewallet.md).
+   [Ewallet Open Amount](../ewallet/e-wallet-open-amount.md), [pulsa/data](pembelian-pulsa-data.md), [game — Topup Game & Voucher](../game/topup-voucher.md), [ewallet direct](../ewallet/ewallet-direct-purchase.md).
 3. **Baca `rc`** — sama dengan alur tanpa inquiry; lihat [kode respons](kode-respons.md).
 4. Jika **`rc = 68`** — [`POST /status`](cek-status.md) atau callback (jika ada).
 
@@ -47,8 +47,8 @@ sequenceDiagram
 | Produk / topik | Halaman |
 |----------------|---------|
 | Kontrak umum inquiry | [Inquiry & katalog](../inquiry/README.md) |
-| Inquiry PLN | [Inquiry PLN](../inquiry/inquiry-pln.md) |
-| PLN prabayar | [Inquiry PLN](../inquiry/inquiry-pln.md) |
+| PLN Prepaid | [PLN Prepaid](../pln-prepaid.md) |
+| PLN prabayar | [PLN Prepaid](../pln-prepaid.md) |
 | E-wallet open amount (inquiry → payment) | [Ewallet Open Amount](../ewallet/e-wallet-open-amount.md) |
 
 ## Catatan
