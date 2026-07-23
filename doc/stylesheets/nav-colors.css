@@ -1,7 +1,6 @@
 /*
-  Override warna abu bawaan Material untuk judul section sidebar.
-  Sumber abu: .md-nav__item--section > .md-nav__link[for] { color: var(--md-default-fg-color--light) }
-  Beranda & Pengenalan tidak diwarnai.
+  Judul kategori sidebar (Prepaid/Game/E-wallet/Referensi Teknis/PLN): ungu.
+  Beranda & Pengenalan: tetap warna default (termasuk saat aktif).
 */
 
 .md-nav__item--section > .md-nav__link[for],
@@ -9,9 +8,22 @@
   color: #7c3aed !important;
 }
 
-/* PLN Prepaid (top-level link, bukan section nested) */
+/* PLN Prepaid (top-level link) */
 .md-nav[data-md-level="0"] > .md-nav__list > .md-nav__item:not(.md-nav__item--nested) > a.md-nav__link[href*="pln-prepaid"],
 .md-nav[data-md-level="0"] > .md-nav__list > .md-nav__item:not(.md-nav__item--nested) > a.md-nav__link[href*="pln-prepaid"] span {
   color: #7c3aed !important;
   font-weight: 700;
+}
+
+/* Beranda & Pengenalan: jangan ungu (override warna aktif tema indigo) */
+.md-nav[data-md-level="0"] > .md-nav__list > .md-nav__item:not(.md-nav__item--nested) > a.md-nav__link[href="."],
+.md-nav[data-md-level="0"] > .md-nav__list > .md-nav__item:not(.md-nav__item--nested) > a.md-nav__link[href="./"],
+.md-nav[data-md-level="0"] > .md-nav__list > .md-nav__item:not(.md-nav__item--nested) > a.md-nav__link[href="../"],
+.md-nav[data-md-level="0"] > .md-nav__list > .md-nav__item:not(.md-nav__item--nested) > a.md-nav__link[href*="02-persiapan-integrasi"],
+.md-nav[data-md-level="0"] > .md-nav__list > .md-nav__item:not(.md-nav__item--nested) > a.md-nav__link[href="."] span,
+.md-nav[data-md-level="0"] > .md-nav__list > .md-nav__item:not(.md-nav__item--nested) > a.md-nav__link[href="./"] span,
+.md-nav[data-md-level="0"] > .md-nav__list > .md-nav__item:not(.md-nav__item--nested) > a.md-nav__link[href="../"] span,
+.md-nav[data-md-level="0"] > .md-nav__list > .md-nav__item:not(.md-nav__item--nested) > a.md-nav__link[href*="02-persiapan-integrasi"] span {
+  color: var(--md-typeset-color) !important;
+  font-weight: 400;
 }
