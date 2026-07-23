@@ -1,0 +1,16 @@
+/*
+  Override warna abu bawaan Material untuk judul section sidebar.
+  Sumber abu: .md-nav__item--section > .md-nav__link[for] { color: var(--md-default-fg-color--light) }
+*/
+
+.md-nav__item--section > .md-nav__link[for],
+.md-nav__item--section > .md-nav__link[for] span {
+  color: #7c3aed !important;
+}
+
+/* Judul top-level non-section (Beranda, Pengenalan, PLN Prepaid) */
+.md-nav[data-md-level="0"] > .md-nav__list > .md-nav__item:not(.md-nav__item--nested) > .md-nav__link,
+.md-nav[data-md-level="0"] > .md-nav__list > .md-nav__item:not(.md-nav__item--nested) > .md-nav__link span {
+  color: #7c3aed !important;
+  font-weight: 700;
+}
