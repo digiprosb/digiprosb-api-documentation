@@ -7,7 +7,7 @@ Contoh **denom tetap** (`code`: `DANA`, `idpel`: `{msisdn}#{nominal}`) ada di ha
 Ringkasan inquiry saja (tanpa langkah payment):
 
 ```bash
-curl -L -X POST 'https://indotechapi.socx.app/reseller/api/v1/inquiry' \
+curl -L -X POST 'https://xxx/reseller/api/v1/inquiry' \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer xxxx' \
   -d '{"code":"DANA","idpel":"08996647676#1000","request_id":"26032600000"}'

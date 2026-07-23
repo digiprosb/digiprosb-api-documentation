@@ -7,7 +7,7 @@ SOCX menyediakan API reseller untuk transaksi prabayar via koneksi host-to-host.
 ### Base URL
 
 ```
-https://indotechapi.socx.app/reseller/api/v1
+https://xxx/reseller/api/v1
 ```
 
 ### Autentikasi
@@ -67,17 +67,17 @@ Dipakai saat produk tidak butuh pre-check.
 sequenceDiagram
   autonumber
   participant Client as Client/Reseller
-  participant Indotech as Indotech
+  participant Digiprosb as Digiprosb
   participant Biller as Biller/Provider
 
-  Client->>Indotech: POST /purchase (code, msisdn, request_id)
+  Client->>Digiprosb: POST /purchase (code, msisdn, request_id)
   alt Pending (rc=68)
-    Indotech->>Biller: proses transaksi
-    Indotech-->>Client: pending
-    Biller-->>Indotech: hasil final
-    Indotech-->>Client: final (00 / gagal)
+    Digiprosb->>Biller: proses transaksi
+    Digiprosb-->>Client: pending
+    Biller-->>Digiprosb: hasil final
+    Digiprosb-->>Client: final (00 / gagal)
   else Langsung final
-    Indotech-->>Client: final (00 / gagal)
+    Digiprosb-->>Client: final (00 / gagal)
   end
 ```
 
@@ -94,18 +94,18 @@ Dipakai saat produk butuh validasi dulu (contoh: PLN, DANA — lalu `POST /payme
 sequenceDiagram
   autonumber
   participant Client as Client/Reseller
-  participant Indotech as Indotech
+  participant Digiprosb as Digiprosb
   participant Biller as Biller/Provider
 
-  Client->>Indotech: POST /inquiry
-  Indotech-->>Client: response inquiry
-  Client->>Indotech: POST /payment atau POST /purchase
+  Client->>Digiprosb: POST /inquiry
+  Digiprosb-->>Client: response inquiry
+  Client->>Digiprosb: POST /payment atau POST /purchase
   alt Pending (rc=68)
-    Indotech-->>Client: pending
-    Biller-->>Indotech: hasil final
-    Indotech-->>Client: final (00 / gagal)
+    Digiprosb-->>Client: pending
+    Biller-->>Digiprosb: hasil final
+    Digiprosb-->>Client: final (00 / gagal)
   else Langsung final
-    Indotech-->>Client: final (00 / gagal)
+    Digiprosb-->>Client: final (00 / gagal)
   end
 ```
 

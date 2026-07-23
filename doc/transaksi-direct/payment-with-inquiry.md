@@ -25,20 +25,20 @@ Request detail (payload) mengikuti kontrak SOCX/API untuk produk Anda.
 sequenceDiagram
   autonumber
   participant Client as Client/Reseller
-  participant Indotech as Indotech
+  participant Digiprosb as Digiprosb
   participant Biller as Biller/Provider
 
-  Client->>Indotech: POST /inquiry
-  Indotech-->>Client: response inquiry
+  Client->>Digiprosb: POST /inquiry
+  Digiprosb-->>Client: response inquiry
 
-  Client->>Indotech: POST /purchase (code, msisdn, request_id)
-  Indotech->>Biller: request topup
+  Client->>Digiprosb: POST /purchase (code, msisdn, request_id)
+  Digiprosb->>Biller: request topup
   alt Pending (rc=68)
-    Indotech-->>Client: response purchase (rc=68, pending)
-    Biller-->>Indotech: response (rc final, sn bila sukses)
-    Indotech-->>Client: response final (rc=00 atau gagal)
+    Digiprosb-->>Client: response purchase (rc=68, pending)
+    Biller-->>Digiprosb: response (rc final, sn bila sukses)
+    Digiprosb-->>Client: response final (rc=00 atau gagal)
   else Langsung final
-    Indotech-->>Client: response purchase (rc=00 atau gagal)
+    Digiprosb-->>Client: response purchase (rc=00 atau gagal)
   end
 ```
 

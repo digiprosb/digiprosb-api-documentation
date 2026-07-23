@@ -52,7 +52,6 @@ Untuk **`POST /purchase`** dan **`POST /status`**, body respons memakai **JSON**
 
 ### Contoh — gagal  (RC 23)
 
-
 ```json
 {
   "code": "CTSEL5",

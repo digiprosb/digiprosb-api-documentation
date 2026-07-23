@@ -7,7 +7,7 @@ Transaksi e-wallet lewat `POST /purchase` — contoh **request**, **respons**, d
 **Endpoint**
 
 ```
-https://indotechapi.socx.app/reseller/api/v1/purchase
+https://xxx/reseller/api/v1/purchase
 ```
 
 **Header**

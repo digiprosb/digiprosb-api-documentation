@@ -16,7 +16,7 @@ Sama seperti API reseller lainnya:
 - Header **`Authorization: Bearer <JWT>`**
 - **Whitelist IP** untuk H2H production (lihat [Persiapan integrasi](../02-persiapan-integrasi.md))
 
-**Base URL:** `https://indotechapi.socx.app/reseller/api/v1` — inquiry: `POST .../inquiry`
+**Base URL:** `https://xxx/reseller/api/v1` — inquiry: `POST .../inquiry`
 
 ## Alur disarankan
 

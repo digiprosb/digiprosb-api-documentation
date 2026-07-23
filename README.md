@@ -1,6 +1,6 @@
-# Dokumentasi API Indotech (Reseller H2H)
+# Dokumentasi API Digiprosb (Reseller H2H)
 
-Repositori ini berisi **dokumentasi teknis** untuk integrasi **Host-to-Host (H2H)** antara sistem Anda dan platform **Indotech** sebagai reseller. Dokumen ditulis dalam Bahasa Indonesia dan diorganisir per **kategori produk** serta **referensi teknis** (selaras sidebar MkDocs).
+Repositori ini berisi **dokumentasi teknis** untuk integrasi **Host-to-Host (H2H)** antara sistem Anda dan platform **Digiprosb** sebagai reseller. Dokumen ditulis dalam Bahasa Indonesia dan diorganisir per **kategori produk** serta **referensi teknis** (selaras sidebar MkDocs).
 
 
 ### Pengenalan & persiapan integrasi
@@ -46,7 +46,7 @@ Repositori ini berisi **dokumentasi teknis** untuk integrasi **Host-to-Host (H2H
 | Direct purchase (JSON / HTTP) | Tersedia | `code`, `msisdn`, `request_id` |
 | Cek saldo · status · RC | Tersedia | `GET /saldo`, `POST /status`, tabel RC |
 | Deposit tiket | Lampiran | Di luar fokus direct purchase |
-| Daftar harga / katalog lengkap | Menyusul | Perlu `code` resmi dari tim Indotech |
+| Daftar harga / katalog lengkap | Menyusul | Perlu `code` resmi dari tim Digiprosb |
 
 ---
 
@@ -67,7 +67,7 @@ Detail lengkap: [Pengenalan & persiapan integrasi](doc/02-persiapan-integrasi.md
 
 **Idempotensi:** jika Anda mengirim ulang **`request_id` yang sama** dan transaksi itu sudah pernah diproses, API mengembalikan **respons yang sama** dengan transaksi tersebut (bukan transaksi baru).
 
-**Pending (`rc = 68`):** transaksi diterima tetapi belum final; lanjutkan dengan polling **`/status`** dan/atau mekanisme callback jika sudah disepakati dengan tim Indotech (detail callback/XML `topUpReport` — review internal).
+**Pending (`rc = 68`):** transaksi diterima tetapi belum final; lanjutkan dengan polling **`/status`** dan/atau mekanisme callback jika sudah disepakati dengan tim Digiprosb (detail callback/XML `topUpReport` — review internal).
 
 ---
 
@@ -107,7 +107,7 @@ Alur: [Pengenalan & persiapan integrasi — bagian alur](doc/02-persiapan-integr
 
 ## Lisensi & kontak
 
-Hak cipta dan kebijakan distribusi dokumen mengikuti kebijakan **Indotech / pemilik API**. Untuk whitelist IP, kredensial API, atau pertanyaan integrasi, hubungi **tim teknis Indotech** melalui kanal resmi yang diberikan kepada mitra.
+ Untuk whitelist IP, kredensial API, atau pertanyaan integrasi, hubungi **tim teknis Digiprosb** melalui kanal resmi yang diberikan kepada mitra.
 
 ---
 

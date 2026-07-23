@@ -14,7 +14,7 @@ Pengecekan saldo deposit reseller secara real-time.
 
 ```bash
 curl -g --request GET \
-  'https://indotechapi.socx.app/reseller/api/v1/saldo' \
+  'https://xxx/reseller/api/v1/saldo' \
   --header 'Authorization: Bearer REPLACE-WITH-YOUR-JWT-TOKEN'
 ```
 

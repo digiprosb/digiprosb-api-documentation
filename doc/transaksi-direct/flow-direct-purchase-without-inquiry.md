@@ -12,21 +12,21 @@ Alur **direct purchase tanpa inquiry** berarti Anda memanggil **`POST /purchase`
 
 ## Diagram alur (referensi dari klasifikasi game)
 
-Diagram berikut sama dengan bagian **Alur direct purchase (umum)** di [Topup Game & Voucher](../game/topup-voucher.md#klasifikasi-produk-game): satu permintaan purchase ke Indotech, dengan cabang pending hingga hasil final dari biller.
+Diagram berikut sama dengan bagian **Alur direct purchase (umum)** di [Topup Game & Voucher](../game/topup-voucher.md#klasifikasi-produk-game): satu permintaan purchase ke Digiprosb, dengan cabang pending hingga hasil final dari biller.
 
 ```mermaid
 sequenceDiagram
   autonumber
   participant Client as Client/Reseller
-  participant Indotech as Indotech
+  participant Digiprosb as Digiprosb
   participant Biller as Biller/Provider
 
-  Client->>Indotech: POST /purchase (code, msisdn, request_id)
-  alt Indotech pending (rc=68)
-    Indotech->>Biller: request topup / voucher (sesuai kategori)
-    Indotech-->>Client: response purchase (rc=68, pending)
-    Biller-->>Indotech: response (rc final, sn bila sukses)
-    Indotech-->>Client: response final (rc=00 atau gagal)
+  Client->>Digiprosb: POST /purchase (code, msisdn, request_id)
+  alt Digiprosb pending (rc=68)
+    Digiprosb->>Biller: request topup / voucher (sesuai kategori)
+    Digiprosb-->>Client: response purchase (rc=68, pending)
+    Biller-->>Digiprosb: response (rc final, sn bila sukses)
+    Digiprosb-->>Client: response final (rc=00 atau gagal)
   end
 ```
 

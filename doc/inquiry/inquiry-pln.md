@@ -4,7 +4,7 @@
 **Base URL**
 
 ```
-https://indotechapi.socx.app/reseller/api/v1
+https://xxx/reseller/api/v1
 ```
 **Header**
 

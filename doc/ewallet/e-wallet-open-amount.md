@@ -8,7 +8,7 @@ Alur **e-wallet open amount** (inquiry → payment): validasi dan rincian tagiha
 **Base URL**
 
 ```
-https://indotechapi.socx.app/reseller/api/v1
+https://xxx/reseller/api/v1
 ```
 **Header**
 
@@ -110,7 +110,7 @@ Contoh:
     "trx_id": 3745398,
     "balance": 9793,
     "footer": "",
-    "header": "Indotech",
+    "header": "Digiprosb",
     "time": "10/06/2026 08:08:46"
 }
 ```
