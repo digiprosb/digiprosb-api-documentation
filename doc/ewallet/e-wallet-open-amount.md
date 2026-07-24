@@ -10,7 +10,7 @@ Alur **e-wallet open amount** (inquiry → payment): validasi dan rincian tagiha
 ```
 https://xxx/reseller/api/v1
 ```
-**Header**
+**Header**      
 
 ```
 Authorization: Bearer <JWT>
@@ -31,8 +31,6 @@ Nomor tujuan dan nominal digabung dengan `#`:
 ```
 {msisdn}#{nominal}
 ```
-
-**Harga:** nominal topup **+ 700** (biaya admin).
 
 Contoh:
 

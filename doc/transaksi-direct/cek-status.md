@@ -48,7 +48,6 @@ Format **sama** dengan respons purchase:
 ## Praktik integrasi
 
 1. Setelah purchase mengembalikan `rc = 68`, lakukan **polling** `/status` dengan interval yang wajar (mis. 2–5 detik, backoff maksimal) hingga `rc` final (`00` sukses atau kode gagal lain).
-2. Jika callback `topUpReport` aktif, sesuaikan agar tidak dobel-update status (gunakan `request_id` / `trxid` sebagai kunci idempotensi di DB Anda).
 
 ## Error
 
