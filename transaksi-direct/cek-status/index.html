@@ -1125,7 +1125,6 @@
 <h2 id="praktik-integrasi">Praktik integrasi<a class="headerlink" href="#praktik-integrasi" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Setelah purchase mengembalikan <code>rc = 68</code>, lakukan <strong>polling</strong> <code>/status</code> dengan interval yang wajar (mis. 2–5 detik, backoff maksimal) hingga <code>rc</code> final (<code>00</code> sukses atau kode gagal lain).</li>
-<li>Jika callback <code>topUpReport</code> aktif, sesuaikan agar tidak dobel-update status (gunakan <code>request_id</code> / <code>trxid</code> sebagai kunci idempotensi di DB Anda).</li>
 </ol>
 <h2 id="error">Error<a class="headerlink" href="#error" title="Permanent link">&para;</a></h2>
 <ul>
