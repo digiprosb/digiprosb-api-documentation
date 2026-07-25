@@ -8,7 +8,7 @@ Alur **e-wallet open amount** (inquiry → payment): validasi dan rincian tagiha
 **Base URL**
 
 ```
-https://xxx/reseller/api/v1
+https://api.digiprosb.id/reseller/api/v1
 ```
 **Header**      
 

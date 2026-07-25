@@ -21,7 +21,7 @@ Di luar fokus **direct purchase**, tetapi tercantum di spesifikasi sumber untuk 
 
 ```bash
 curl -g --request POST \
-  'https://xxx/reseller/api/v1/deposit_ticket' \
+  'https://api.digiprosb.id/reseller/api/v1/deposit_ticket' \
   --header 'Authorization: Bearer REPLACE-WITH-YOUR-JWT-TOKEN' \
   --header 'Content-Type: application/json' \
   --data-raw '{"amount":1000000}'

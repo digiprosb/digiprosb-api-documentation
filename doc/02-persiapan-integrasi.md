@@ -7,7 +7,7 @@ SOCX menyediakan API reseller untuk transaksi prabayar via koneksi host-to-host.
 ### Base URL
 
 ```
-https://xxx/reseller/api/v1
+https://api.digiprosb.id/reseller/api/v1
 ```
 
 ### Autentikasi

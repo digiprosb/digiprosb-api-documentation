@@ -14,7 +14,7 @@ Pengecekan saldo deposit reseller secara real-time.
 
 ```bash
 curl -g --request GET \
-  'https://xxx/reseller/api/v1/saldo' \
+  'https://api.digiprosb.id/reseller/api/v1/saldo' \
   --header 'Authorization: Bearer REPLACE-WITH-YOUR-JWT-TOKEN'
 ```
 

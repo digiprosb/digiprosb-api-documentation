@@ -7,7 +7,7 @@ Transaksi e-wallet lewat `POST /purchase` — contoh **request**, **respons**, d
 **Endpoint**
 
 ```
-https://xxx/reseller/api/v1/purchase
+https://api.digiprosb.id/reseller/api/v1/purchase
 ```
 
 **Header**

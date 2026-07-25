@@ -7,7 +7,7 @@ Transaksi prepaid (pulsa dan data) lewat `POST /purchase` — contoh **request**
 **Base URL**
 
 ```
-https://xxx/reseller/api/v1
+https://api.digiprosb.id/reseller/api/v1
 ```
 
 **Header**

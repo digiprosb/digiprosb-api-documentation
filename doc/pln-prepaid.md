@@ -5,7 +5,7 @@
 **Base URL**
 
 ```
-https://xxx/reseller/api/v1
+https://api.digiprosb.id/reseller/api/v1
 ```
 **Header**
 

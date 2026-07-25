@@ -7,7 +7,7 @@ Purchase game (`POST /purchase`) — tiga kategori, masing-masing dengan contoh 
 **Endpoint**
 
 ```
-https://xxx/reseller/api/v1/purchase
+https://api.digiprosb.id/reseller/api/v1/purchase
 ```
 
 **Header**

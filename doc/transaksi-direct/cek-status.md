@@ -21,7 +21,7 @@ Mengambil status terkini transaksi berdasarkan `request_id` Anda.
 
 ```bash
 curl -g --request POST \
-  'https://xxx/reseller/api/v1/status' \
+  'https://api.digiprosb.id/reseller/api/v1/status' \
   --header 'Authorization: Bearer REPLACE-WITH-YOUR-JWT-TOKEN' \
   --header 'Content-Type: application/json' \
   --data-raw '{"request_id":"999999"}'
