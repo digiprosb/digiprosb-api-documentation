@@ -1165,8 +1165,7 @@
 
 <h1 id="callback">Callback<a class="headerlink" href="#callback" title="Permanent link">&para;</a></h1>
 <h2 id="ringkasan">Ringkasan<a class="headerlink" href="#ringkasan" title="Permanent link">&para;</a></h2>
-<p>Callback digunakan untuk mengirim notifikasi hasil final transaksi <code>POST /purchase</code> ke URL callback yang telah dikonfigurasi.</p>
-<p>Alur utama tetap request–response melalui <code>POST /purchase</code>. Callback berfungsi sebagai mekanisme tambahan (fallback) jika respons purchase tidak diterima karena timeout atau gangguan jaringan.</p>
+<p>Callback adalah sebuah metode di mana sebuah sistem akan secara otomatis mengirimkan informasi atau notifikasi kepada URL yang telah ditentukan setelah suatu proses atau transaksi selesai diproses.</p>
 <h2 id="http-request">HTTP Request<a class="headerlink" href="#http-request" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1193,7 +1192,7 @@
 <h3 id="contoh-respons-sukses">Contoh respons sukses<a class="headerlink" href="#contoh-respons-sukses" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DRYN02&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;msisdn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0896774950955#100&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;msisdn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;089674950955#100&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;25071w2123q12700001&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;trxid&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">13170</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;price&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">180</span><span class="p">,</span>
@@ -1238,7 +1237,7 @@
 </tr>
 <tr>
 <td><code>trxid</code></td>
-<td>Identitas transaksi</td>
+<td>Identitas transaksi yang diberikan oleh server kami</td>
 </tr>
 <tr>
 <td><code>price</code></td>
