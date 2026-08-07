@@ -15,6 +15,7 @@ Dokumen ini untuk integrasi **Host-to-Host (H2H)** reseller ke platform SOCX. Is
 | → [PLN Prepaid](pln-prepaid.md) | `POST /purchase` PLN Direct Purchase dan Direct with Inquiry  |
 | → [Cek status](transaksi-direct/cek-status.md) | `POST /status` |
 | → [Cek saldo](transaksi-direct/cek-saldo.md) | `GET /saldo` |
+| → [Callback](callback.md) | Notifikasi hasil final transaksi `POST /purchase` |
 | → [Kode respons (RC)](transaksi-direct/kode-respons.md) | Tabel RC |
 | [Lampiran — deposit tiket](appendix-deposit-ticket.md) | Di luar direct purchase; dari spesifikasi sumber |
 

@@ -30,6 +30,7 @@ Repositori ini berisi **dokumentasi teknis** untuk integrasi **Host-to-Host (H2H
 
 - [Pengenalan & persiapan integrasi](doc/02-persiapan-integrasi.md)
 - [Cek saldo](doc/transaksi-direct/cek-saldo.md) · [Pembelian Pulsa & Data](doc/transaksi-direct/pembelian-pulsa-data.md) · [Topup Game & Voucher](doc/game/topup-voucher.md) · [Ewallet Direct Purchase](doc/ewallet/ewallet-direct-purchase.md) · [Cek status](doc/transaksi-direct/cek-status.md)
+- [Callback](doc/callback.md)
 - [Lampiran deposit tiket](doc/appendix-deposit-ticket.md)
 - [Kode respons (RC)](doc/transaksi-direct/kode-respons.md)
 
