@@ -2,9 +2,8 @@
 
 ## Ringkasan
 
-Callback digunakan untuk mengirim notifikasi hasil final transaksi `POST /purchase` ke URL callback yang telah dikonfigurasi.
+Callback adalah sebuah metode di mana sebuah sistem akan secara otomatis mengirimkan informasi atau notifikasi kepada URL yang telah ditentukan setelah suatu proses atau transaksi selesai diproses.
 
-Alur utama tetap request–response melalui `POST /purchase`. Callback berfungsi sebagai mekanisme tambahan (fallback) jika respons purchase tidak diterima karena timeout atau gangguan jaringan.
 
 ## HTTP Request
 
@@ -26,7 +25,7 @@ POST {callback_url}
 ```json
 {
   "code": "DRYN02",
-  "msisdn": "0896774950955#100",
+  "msisdn": "089674950955#100",
   "request_id": "25071w2123q12700001",
   "trxid": 13170,
   "price": 180,
@@ -59,7 +58,7 @@ POST {callback_url}
 | `code` | Kode produk |
 | `msisdn` | Nomor tujuan pelanggan |
 | `request_id` | Identitas permintaan transaksi dari sisi client |
-| `trxid` | Identitas transaksi |
+| `trxid` | Identitas transaksi yang diberikan oleh server kami |
 | `price` | Nominal / harga transaksi |
 | `rc` | Kode respons transaksi |
 | `balance` | Sisa saldo |
