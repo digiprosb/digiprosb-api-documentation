@@ -1,3 +1,311 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/02-persiapan-integrasi/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/02-persiapan-integrasi/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/02-persiapan-integrasi/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/appendix-deposit-ticket/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/appendix-deposit-ticket/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/appendix-deposit-ticket/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/callback/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/callback/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/callback/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/introduction-transaction-flow/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/introduction-transaction-flow/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/introduction-transaction-flow/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/pln-prepaid/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/pln-prepaid/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/pln-prepaid/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/ewallet/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/ewallet/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/ewallet/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/ewallet/dana-inquiry-denom-bebas/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/ewallet/dana-inquiry-denom-bebas/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/ewallet/dana-inquiry-denom-bebas/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/ewallet/dana-inquiry-denom-tetap/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/ewallet/dana-inquiry-denom-tetap/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/ewallet/dana-inquiry-denom-tetap/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/ewallet/e-wallet-open-amount/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/ewallet/e-wallet-open-amount/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/ewallet/e-wallet-open-amount/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/ewallet/ewallet-direct-purchase/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/ewallet/ewallet-direct-purchase/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/ewallet/ewallet-direct-purchase/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/game/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/game/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/game/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/game/topup-voucher/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/game/topup-voucher/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/game/topup-voucher/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/inquiry/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/inquiry/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/inquiry/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/prepaid/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/prepaid/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/prepaid/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/transaksi-direct/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/transaksi-direct/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/transaksi-direct/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/transaksi-direct/cek-saldo/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/transaksi-direct/cek-saldo/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/transaksi-direct/cek-saldo/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/transaksi-direct/cek-status/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/transaksi-direct/cek-status/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/transaksi-direct/cek-status/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/transaksi-direct/flow-direct-purchase-without-inquiry/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/transaksi-direct/flow-direct-purchase-without-inquiry/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/transaksi-direct/flow-direct-purchase-without-inquiry/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/transaksi-direct/kode-respons/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/transaksi-direct/kode-respons/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/transaksi-direct/kode-respons/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/transaksi-direct/payment-with-inquiry/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/transaksi-direct/payment-with-inquiry/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/transaksi-direct/payment-with-inquiry/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/transaksi-direct/pembelian-pulsa-data/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/transaksi-direct/pembelian-pulsa-data/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/transaksi-direct/pembelian-pulsa-data/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/en/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/en/02-persiapan-integrasi/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/02-persiapan-integrasi/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/02-persiapan-integrasi/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/en/appendix-deposit-ticket/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/appendix-deposit-ticket/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/appendix-deposit-ticket/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/en/callback/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/callback/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/callback/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/en/introduction-transaction-flow/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/introduction-transaction-flow/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/introduction-transaction-flow/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/en/pln-prepaid/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/pln-prepaid/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/pln-prepaid/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/en/ewallet/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/ewallet/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/ewallet/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/en/ewallet/dana-inquiry-denom-bebas/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/ewallet/dana-inquiry-denom-bebas/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/ewallet/dana-inquiry-denom-bebas/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/en/ewallet/dana-inquiry-denom-tetap/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/ewallet/dana-inquiry-denom-tetap/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/ewallet/dana-inquiry-denom-tetap/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/en/ewallet/e-wallet-open-amount/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/ewallet/e-wallet-open-amount/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/ewallet/e-wallet-open-amount/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/en/ewallet/ewallet-direct-purchase/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/ewallet/ewallet-direct-purchase/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/ewallet/ewallet-direct-purchase/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/en/game/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/game/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/game/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/en/game/topup-voucher/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/game/topup-voucher/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/game/topup-voucher/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/en/inquiry/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/inquiry/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/inquiry/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/en/prepaid/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/prepaid/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/prepaid/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/en/transaksi-direct/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/transaksi-direct/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/transaksi-direct/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/en/transaksi-direct/cek-saldo/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/transaksi-direct/cek-saldo/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/transaksi-direct/cek-saldo/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/en/transaksi-direct/cek-status/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/transaksi-direct/cek-status/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/transaksi-direct/cek-status/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/en/transaksi-direct/flow-direct-purchase-without-inquiry/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/transaksi-direct/flow-direct-purchase-without-inquiry/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/transaksi-direct/flow-direct-purchase-without-inquiry/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/en/transaksi-direct/kode-respons/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/transaksi-direct/kode-respons/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/transaksi-direct/kode-respons/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/en/transaksi-direct/payment-with-inquiry/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/transaksi-direct/payment-with-inquiry/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/transaksi-direct/payment-with-inquiry/"/>
+    </url>
+    <url>
+        <loc>https://digiprosb.github.io/digiprosb-api-documentation/en/transaksi-direct/pembelian-pulsa-data/</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://digiprosb.github.io/digiprosb-api-documentation/en/transaksi-direct/pembelian-pulsa-data/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://digiprosb.github.io/digiprosb-api-documentation/transaksi-direct/pembelian-pulsa-data/"/>
+    </url>
 </urlset>
