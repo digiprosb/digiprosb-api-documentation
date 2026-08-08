@@ -2,6 +2,24 @@
 
 Outside the focus of **direct purchase**, but included in the source specification for integrator completeness.
 
+## URL & authentication
+
+**Base URL**
+
+```
+https://api.digiprosb.id/reseller/api/v1
+```
+
+**Header**
+
+```http
+Authorization: Bearer <JWT>
+Content-Type: application/json
+```
+
+---
+
+
 ## Request
 
 | Property | Value |
@@ -14,17 +32,15 @@ Outside the focus of **direct purchase**, but included in the source specificati
 ## Body
 
 | Field | Type | Required |
-|-------|------|--------|
+|-------|------|----------|
 | `amount` | number | Yes |
 
-## cURL example
+## Body example
 
-```bash
-curl -g --request POST \
-  'https://api.digiprosb.id/reseller/api/v1/deposit_ticket' \
-  --header 'Authorization: Bearer REPLACE-WITH-YOUR-JWT-TOKEN' \
-  --header 'Content-Type: application/json' \
-  --data-raw '{"amount":1000000}'
+```json
+{
+  "amount": 1000000
+}
 ```
 
 ## Response (example)

@@ -25,10 +25,10 @@ POST {callback_url}
 ```json
 {
   "code": "DRYN02",
-  "msisdn": "089674950955#100",
+  "msisdn": "089674950955#1000",
   "request_id": "25071w2123q12700001",
   "trxid": 13170,
-  "price": 180,
+  "price": 1700,
   "rc": "00",
   "balance": 0,
   "sn": "DNID MAUXXXX EGXXXXX",
@@ -41,10 +41,10 @@ POST {callback_url}
 ```json
 {
   "code": "DRYN02",
-  "msisdn": "0896774950955#100",
+  "msisdn": "0896774950955#1000",
   "request_id": "0015fk5qwixoa5fj",
   "trxid": 17,
-  "price": 800,
+  "price": 1700,
   "rc": "23",
   "balance": 45700,
   "message": "Gagal, Gagal biller"

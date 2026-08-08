@@ -73,9 +73,9 @@ sequenceDiagram
 
   Client->>Digiprosb: POST /purchase (code, msisdn, request_id)
   Digiprosb-->>Client: pending (rc=68)
-  Digiprosb->>Biller: request transaksi
-  Biller-->>Digiprosb: hasil final
-  Digiprosb-->>Client: callback final (rc=00 / gagal)
+  Digiprosb->>Biller: transaction request
+  Biller-->>Digiprosb: final result
+  Digiprosb-->>Client: callback final (rc=00 / failed)
 ```
 
 ### Payment with inquiry
@@ -95,15 +95,11 @@ sequenceDiagram
   participant Biller as Biller/Provider
 
   Client->>Digiprosb: POST /inquiry
-  Digiprosb-->>Client: response inquiry
-  Client->>Digiprosb: POST /payment atau POST /purchase
-  alt Pending (rc=68)
-    Digiprosb-->>Client: pending
-    Biller-->>Digiprosb: hasil final
-    Digiprosb-->>Client: final (00 / gagal)
-  else Langsung final
-    Digiprosb-->>Client: final (00 / gagal)
-  end
+  Digiprosb-->>Client: inquiry response
+  Client->>Digiprosb: POST /payment
+  Digiprosb->>Biller: transaction request
+  Biller-->>Digiprosb: final result
+  Digiprosb-->>Client: final (rc=00 / failed)
 ```
 
 ### Quick reference

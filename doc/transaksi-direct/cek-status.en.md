@@ -2,6 +2,24 @@
 
 Retrieve the current transaction status by your `request_id`.
 
+
+## URL & authentication
+
+**Base URL**
+
+```
+https://api.digiprosb.id/reseller/api/v1
+```
+
+**Header**
+
+```http
+Authorization: Bearer <JWT>
+Content-Type: application/json
+```
+
+---
+
 ## Request
 
 | Property | Value |
@@ -17,19 +35,16 @@ Retrieve the current transaction status by your `request_id`.
 |-------|------|----------|
 | `request_id` | string | Yes |
 
-## cURL example
+## Body example
 
-```bash
-curl -g --request POST \
-  'https://api.digiprosb.id/reseller/api/v1/status' \
-  --header 'Authorization: Bearer REPLACE-WITH-YOUR-JWT-TOKEN' \
-  --header 'Content-Type: application/json' \
-  --data-raw '{"request_id":"999999"}'
+```json
+{
+  "request_id": "999999",
+}
 ```
 
 ## Response (examples)
 
-Format is the **same** as the purchase response.
 
 ### Success
 
@@ -66,7 +81,3 @@ Format is the **same** as the purchase response.
 ## Integration practices
 
 1. After purchase returns `rc = 68`, **poll** `/status` at a reasonable interval (e.g. 2–5 seconds, with maximum backoff) until `rc` is final (`00` success or another failure code).
-
-## Errors
-
-- `rc = 11` — transaction not found (see [response codes](./kode-respons.md)).

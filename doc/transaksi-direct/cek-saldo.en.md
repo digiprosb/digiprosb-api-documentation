@@ -2,6 +2,23 @@
 
 Real-time check of the reseller deposit balance.
 
+## URL & authentication
+
+**Base URL**
+
+```
+https://api.digiprosb.id/reseller/api/v1
+```
+
+**Header**
+
+```http
+Authorization: Bearer <JWT>
+Content-Type: application/json
+```
+
+---
+
 ## Request
 
 | Property | Value |
@@ -10,13 +27,6 @@ Real-time check of the reseller deposit balance.
 | URL | `{base_url}/saldo` |
 | Header | `Authorization: Bearer <JWT>` |
 
-## cURL example
-
-```bash
-curl -g --request GET \
-  'https://api.digiprosb.id/reseller/api/v1/saldo' \
-  --header 'Authorization: Bearer REPLACE-WITH-YOUR-JWT-TOKEN'
-```
 
 ## Success response (example)
 
