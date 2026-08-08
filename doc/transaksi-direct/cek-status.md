@@ -2,6 +2,24 @@
 
 Mengambil status terkini transaksi berdasarkan `request_id` Anda.
 
+
+## URL & autentikasi
+
+**Base URL**
+
+```
+https://api.digiprosb.id/reseller/api/v1
+```
+
+**Header**
+
+```http
+Authorization: Bearer <JWT>
+Content-Type: application/json
+```
+
+---
+
 ## Request
 
 | Properti | Nilai |
@@ -17,31 +35,46 @@ Mengambil status terkini transaksi berdasarkan `request_id` Anda.
 |-------|------|--------|
 | `request_id` | string | Ya |
 
-## Contoh cURL
+## Contoh Body
 
-```bash
-curl -g --request POST \
-  'https://api.digiprosb.id/reseller/api/v1/status' \
-  --header 'Authorization: Bearer REPLACE-WITH-YOUR-JWT-TOKEN' \
-  --header 'Content-Type: application/json' \
-  --data-raw '{"request_id":"999999"}'
+```json
+{
+  "request_id": "999999",
+}
 ```
 
 ## Response (contoh)
 
-Format **sama** dengan respons purchase:
+
+### Sukses
 
 ```json
 {
   "code": "CTSEL5",
   "msisdn": "08121231231",
   "request_id": "999999",
-  "rc": "68",
+  "rc": "00",
+  "trxid": 16413,
+  "price": 5400,
+  "balance": 341890000,
+  "sn": "12345678901234567890",
+  "message": "SUKSES"
+}
+```
+
+### Gagal
+
+```json
+{
+  "code": "CTSEL5",
+  "msisdn": "08121231231",
+  "request_id": "999999",
+  "rc": "23",
   "trxid": 16413,
   "price": 5400,
   "balance": 341890000,
   "sn": "",
-  "message": "PENDING, Transaksi sedang diproses"
+  "message": "Gagal, Gagal biller"
 }
 ```
 
@@ -49,6 +82,3 @@ Format **sama** dengan respons purchase:
 
 1. Setelah purchase mengembalikan `rc = 68`, lakukan **polling** `/status` dengan interval yang wajar (mis. 2–5 detik, backoff maksimal) hingga `rc` final (`00` sukses atau kode gagal lain).
 
-## Error
-
-- `rc = 11` — transaksi tidak ditemukan (lihat [kode respons](./kode-respons.md)).

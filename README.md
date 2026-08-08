@@ -4,6 +4,8 @@ Repositori ini berisi **dokumentasi teknis** untuk integrasi **Host-to-Host (H2H
 
 **Dokumentasi online:** https://digiprosb.github.io/digiprosb-api-documentation/
 
+Dokumentasi tersedia dalam **Indonesia** dan **English** (ikon translate di navbar kanan atas).
+
 
 ### Pengenalan & persiapan integrasi
 

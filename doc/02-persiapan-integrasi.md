@@ -2,7 +2,7 @@
 
 ## Pengenalan
 
-SOCX menyediakan API reseller untuk transaksi prabayar via koneksi host-to-host.
+Digiprosb menyediakan API reseller untuk transaksi prabayar via koneksi host-to-host.
 
 ### Base URL
 
@@ -31,12 +31,12 @@ Checklist sebelum mulai hit API production.
 ### 1. IP statis & whitelist
 
 - Pastikan server integrasi memakai **IP statis** (atau rentang yang disepakati).
-- Kirim IP ke tim SOCX untuk **whitelist** di sisi API.
+- Kirim IP ke tim Digiprosb untuk **whitelist** di sisi API.
 - Tanpa whitelist, request dapat ditolak di layer jaringan atau aplikasi.
 
 ### 2. Token (JWT)
 
-1. Login ke portal reseller SOCX.
+1. Login ke portal reseller Digiprosb.
 2. Buka **Settings**.
 3. Salin token dan simpan sebagai rahasia .
 4. Header: `Authorization: Bearer <token>`.
@@ -45,7 +45,7 @@ Checklist sebelum mulai hit API production.
 ### 3. Konvensi `request_id`
 
 - Harus **unik per percobaan transaksi baru** dari sisi Anda.
-- Jika Anda mengirim ulang `request_id` yang **sudah pernah diproses** di server SOCX, API mengembalikan **respons yang sama** dengan transaksi tersebut (idempotensi).
+- Jika Anda mengirim ulang `request_id` yang **sudah pernah diproses** di server Digiprosb, API mengembalikan **respons yang sama** dengan transaksi tersebut (idempotensi).
 
 
 ### 4. HTTPS
@@ -96,14 +96,10 @@ sequenceDiagram
 
   Client->>Digiprosb: POST /inquiry
   Digiprosb-->>Client: response inquiry
-  Client->>Digiprosb: POST /payment atau POST /purchase
-  alt Pending (rc=68)
-    Digiprosb-->>Client: pending
-    Biller-->>Digiprosb: hasil final
-    Digiprosb-->>Client: final (00 / gagal)
-  else Langsung final
-    Digiprosb-->>Client: final (00 / gagal)
-  end
+  Client->>Digiprosb: POST /payment
+  Digiprosb->>Biller: request transaksi
+  Biller-->>Digiprosb: hasil final
+  Digiprosb-->>Client: final (rc=00 / gagal)
 ```
 
 ### Referensi cepat

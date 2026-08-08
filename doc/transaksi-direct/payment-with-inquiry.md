@@ -9,7 +9,7 @@ Alur **payment with inquiry** berarti Anda memanggil **`POST /inquiry`** terlebi
 
 Dipakai ketika SKU atau biller mewajibkan pre-check sebelum debit (contoh: **PLN prabayar**, **e-wallet open amount**, produk lain sesuai katalog).
 
-Request detail (payload) mengikuti kontrak SOCX/API untuk produk Anda.
+Request detail (payload) mengikuti kontrak Digiprosb API untuk produk Anda.
 
 ## Ringkasan langkah integrasi
 
@@ -56,4 +56,4 @@ sequenceDiagram
 - Mapping **`idpel` ↔ `msisdn`** atau field lain mengikuti **daftar produk** dari tim API untuk alur inquiry → purchase.
 - Jika `request_id` purchase sama dengan transaksi yang sudah ada, perilaku idempotensi mengikuti kontrak purchase per kategori.
 - Jika respons `rc=68`, transaksi dianggap **pending**.
-- Jika request purchase menggunakan `request_id` yang sama, SOCX mengembalikan data transaksi yang sudah ada sesuai data terakhir di sistem.
+- Jika request purchase menggunakan `request_id` yang sama, Digiprosb mengembalikan data transaksi yang sudah ada sesuai data terakhir di sistem.

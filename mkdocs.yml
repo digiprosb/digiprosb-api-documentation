@@ -1,15 +1,16 @@
-# Repo: https://github.com/digiprosb-payment/socx-api-documentation
+# Repo: https://github.com/digiprosb/digiprosb-api-documentation
 #
 # WAJIB: jalankan MkDocs dari folder yang berisi file INI (bukan dari parent monorepo lain):
 #   cd <repo-docs> && mkdocs serve
 # Lihat README.md — bagian "Pratinjau lokal (MkDocs)".
 
 site_name: Dokumentasi API Digiprosb
+site_url: https://digiprosb.github.io/digiprosb-api-documentation/
 strict: true
 site_description: Integrasi H2H Reseller Digiprosb — direct purchase, saldo, status, inquiry
 site_author: Digiprosb
 
-repo_url: https://github.com/digiprosb-payment/socx-api-documentation
+repo_url: https://github.com/digiprosb/digiprosb-api-documentation
 edit_uri: edit/main/doc/
 
 docs_dir: doc
@@ -17,6 +18,8 @@ docs_dir: doc
 theme:
   name: material
   language: id
+  icon:
+    alternate: material/translate
   palette:
     - scheme: default
       primary: indigo
@@ -61,6 +64,37 @@ markdown_extensions:
 
 plugins:
   - search
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      languages:
+        - locale: id
+          default: true
+          name: Indonesia
+          build: true
+        - locale: en
+          name: English
+          build: true
+          site_name: Digiprosb API Documentation
+          site_description: Digiprosb H2H Reseller integration — direct purchase, balance, status, inquiry
+          nav_translations:
+            Beranda: Home
+            Pengenalan & persiapan integrasi: Introduction & integration setup
+            Prepaid (Pulsa, Data): Prepaid (Airtime, Data)
+            Pulsa & Data: Airtime & Data
+            Game: Game
+            Topup Game & Voucher: Game Top-up & Voucher
+            E-wallet: E-wallet
+            Ewallet Direct Purchase: Ewallet Direct Purchase
+            Ewallet Open Amount: Ewallet Open Amount
+            PLN Prepaid: PLN Prepaid
+            Referensi Teknis: Technical Reference
+            Cek saldo: Check balance
+            Cek status: Check status
+            Callback: Callback
+            Deposit tiket: Deposit ticket
+            Kode respons (RC): Response codes (RC)
 
 extra_css:
   - stylesheets/nav-colors.css
@@ -85,4 +119,3 @@ nav:
 
 extra:
   generator: false
-

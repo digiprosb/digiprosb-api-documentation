@@ -1,6 +1,6 @@
-# Dokumentasi API SOCX (Reseller H2H)
+# Dokumentasi API Digiprosb (Reseller H2H)
 
-Dokumen ini untuk integrasi **Host-to-Host (H2H)** reseller ke platform SOCX. Isi disusun bertahap: **pengenalan & persiapan integrasi → transaksi → kode respons → contoh**.
+Dokumen ini untuk integrasi **Host-to-Host (H2H)** reseller ke platform Digiprosb. Isi disusun bertahap: **pengenalan & persiapan integrasi → transaksi → kode respons → contoh**.
 
 ## Isi dokumentasi
 

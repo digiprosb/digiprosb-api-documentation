@@ -25,7 +25,7 @@ Sama seperti API reseller lainnya:
 
 ## Menyusul
 
-- Daftar lengkap `code` inquiry per kategori — dari tim SOCX.
+- Daftar lengkap `code` inquiry per kategori — dari tim Digiprosb.
 - Varian response untuk produk non-PLN.
 
 ## Link ke transaksi

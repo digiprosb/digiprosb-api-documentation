@@ -2,6 +2,23 @@
 
 Pengecekan saldo deposit reseller secara real-time.
 
+## URL & autentikasi
+
+**Base URL**
+
+```
+https://api.digiprosb.id/reseller/api/v1
+```
+
+**Header**
+
+```http
+Authorization: Bearer <JWT>
+Content-Type: application/json
+```
+
+---
+
 ## Request
 
 | Properti | Nilai |
@@ -10,13 +27,6 @@ Pengecekan saldo deposit reseller secara real-time.
 | URL | `{base_url}/saldo` |
 | Header | `Authorization: Bearer <JWT>` |
 
-## Contoh cURL
-
-```bash
-curl -g --request GET \
-  'https://api.digiprosb.id/reseller/api/v1/saldo' \
-  --header 'Authorization: Bearer REPLACE-WITH-YOUR-JWT-TOKEN'
-```
 
 ## Response sukses (contoh)
 
@@ -28,7 +38,7 @@ curl -g --request GET \
 
 | Field | Tipe | Keterangan |
 |-------|------|------------|
-| `balance` | number | Saldo tersedia (satuan sesuai kontrak internal SOCX — biasanya rupiah whole number) |
+| `balance` | number | Saldo tersedia (satuan sesuai kontrak internal Digiprosb — biasanya rupiah whole number) |
 
 ## Error umum
 

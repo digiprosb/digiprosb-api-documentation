@@ -1,49 +1,33 @@
-# Lampiran — Create tiket deposit
+# Appendix — Create deposit ticket
 
-Di luar fokus **direct purchase**, tetapi tercantum di spesifikasi sumber untuk kelengkapan integrator.
-
-## URL & autentikasi
-
-**Base URL**
-
-```
-https://api.digiprosb.id/reseller/api/v1
-```
-
-**Header**
-
-```http
-Authorization: Bearer <JWT>
-Content-Type: application/json
-```
-
----
-
+Outside the focus of **direct purchase**, but included in the source specification for integrator completeness.
 
 ## Request
 
-| Properti | Nilai |
+| Property | Value |
 |----------|--------|
-| Metode | `POST` |
+| Method | `POST` |
 | URL | `{base_url}/deposit_ticket` |
 | Header | `Authorization: Bearer <JWT>` |
 | Header | `Content-Type: application/json` |
 
 ## Body
 
-| Field | Tipe | Wajib |
+| Field | Type | Required |
 |-------|------|--------|
-| `amount` | number | Ya |
+| `amount` | number | Yes |
 
-## Contoh Body
+## cURL example
 
-```json
-{
-  "amount": 1000000
-}
+```bash
+curl -g --request POST \
+  'https://api.digiprosb.id/reseller/api/v1/deposit_ticket' \
+  --header 'Authorization: Bearer REPLACE-WITH-YOUR-JWT-TOKEN' \
+  --header 'Content-Type: application/json' \
+  --data-raw '{"amount":1000000}'
 ```
 
-## Response (contoh)
+## Response (example)
 
 ```json
 {
@@ -72,4 +56,4 @@ Content-Type: application/json
 }
 ```
 
-Validasi field `banks` di production, format tanggal, dan apakah respons persis sama — review dengan tim Digiprosb.
+Validate the `banks` field in production, the date format, and whether the response is exactly the same — review with the Digiprosb team.
