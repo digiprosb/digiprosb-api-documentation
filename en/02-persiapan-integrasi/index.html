@@ -1365,9 +1365,9 @@
 
   Client-&gt;&gt;Digiprosb: POST /purchase (code, msisdn, request_id)
   Digiprosb--&gt;&gt;Client: pending (rc=68)
-  Digiprosb-&gt;&gt;Biller: request transaksi
-  Biller--&gt;&gt;Digiprosb: hasil final
-  Digiprosb--&gt;&gt;Client: callback final (rc=00 / gagal)</code></pre>
+  Digiprosb-&gt;&gt;Biller: transaction request
+  Biller--&gt;&gt;Digiprosb: final result
+  Digiprosb--&gt;&gt;Client: callback final (rc=00 / failed)</code></pre>
 <h3 id="payment-with-inquiry">Payment with inquiry<a class="headerlink" href="#payment-with-inquiry" title="Permanent link">&para;</a></h3>
 <p>Used when the product needs validation first (for example: PLN, DANA — then <code>POST /payment</code>).</p>
 <ol>
@@ -1383,15 +1383,11 @@
   participant Biller as Biller/Provider
 
   Client-&gt;&gt;Digiprosb: POST /inquiry
-  Digiprosb--&gt;&gt;Client: response inquiry
-  Client-&gt;&gt;Digiprosb: POST /payment atau POST /purchase
-  alt Pending (rc=68)
-    Digiprosb--&gt;&gt;Client: pending
-    Biller--&gt;&gt;Digiprosb: hasil final
-    Digiprosb--&gt;&gt;Client: final (00 / gagal)
-  else Langsung final
-    Digiprosb--&gt;&gt;Client: final (00 / gagal)
-  end</code></pre>
+  Digiprosb--&gt;&gt;Client: inquiry response
+  Client-&gt;&gt;Digiprosb: POST /payment
+  Digiprosb-&gt;&gt;Biller: transaction request
+  Biller--&gt;&gt;Digiprosb: final result
+  Digiprosb--&gt;&gt;Client: final (rc=00 / failed)</code></pre>
 <h3 id="quick-reference">Quick reference<a class="headerlink" href="#quick-reference" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Purchase prepaid: <a href="../transaksi-direct/pembelian-pulsa-data/">Pulsa &amp; Data Purchase</a></li>

@@ -840,6 +840,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#url-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        URL &amp; authentication
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#request" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -862,10 +873,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#curl-example" class="md-nav__link">
+  <a href="#body-example" class="md-nav__link">
     <span class="md-ellipsis">
       
-        cURL example
+        Body example
       
     </span>
   </a>
@@ -916,17 +927,6 @@
     <span class="md-ellipsis">
       
         Integration practices
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Errors
       
     </span>
   </a>
@@ -1060,6 +1060,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#url-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        URL &amp; authentication
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#request" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1082,10 +1093,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#curl-example" class="md-nav__link">
+  <a href="#body-example" class="md-nav__link">
     <span class="md-ellipsis">
       
-        cURL example
+        Body example
       
     </span>
   </a>
@@ -1142,17 +1153,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Errors
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1175,6 +1175,15 @@
 
 <h1 id="check-status">Check status<a class="headerlink" href="#check-status" title="Permanent link">&para;</a></h1>
 <p>Retrieve the current transaction status by your <code>request_id</code>.</p>
+<h2 id="url-authentication">URL &amp; authentication<a class="headerlink" href="#url-authentication" title="Permanent link">&para;</a></h2>
+<p><strong>Base URL</strong></p>
+<div class="highlight"><pre><span></span><code>https://api.digiprosb.id/reseller/api/v1
+</code></pre></div>
+<p><strong>Header</strong></p>
+<div class="highlight"><pre><span></span><code><span class="err">Authorization: Bearer &lt;JWT&gt;</span>
+<span class="err">Content-Type: application/json</span>
+</code></pre></div>
+<hr />
 <h2 id="request">Request<a class="headerlink" href="#request" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1219,15 +1228,12 @@
 </tr>
 </tbody>
 </table>
-<h2 id="curl-example">cURL example<a class="headerlink" href="#curl-example" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-g<span class="w"> </span>--request<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s1">&#39;https://api.digiprosb.id/reseller/api/v1/status&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer REPLACE-WITH-YOUR-JWT-TOKEN&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--data-raw<span class="w"> </span><span class="s1">&#39;{&quot;request_id&quot;:&quot;999999&quot;}&#39;</span>
+<h2 id="body-example">Body example<a class="headerlink" href="#body-example" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;999999&quot;</span><span class="p">,</span>
+<span class="p">}</span>
 </code></pre></div>
 <h2 id="response-examples">Response (examples)<a class="headerlink" href="#response-examples" title="Permanent link">&para;</a></h2>
-<p>Format is the <strong>same</strong> as the purchase response.</p>
 <h3 id="success">Success<a class="headerlink" href="#success" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CTSEL5&quot;</span><span class="p">,</span>
@@ -1258,10 +1264,6 @@
 <ol>
 <li>After purchase returns <code>rc = 68</code>, <strong>poll</strong> <code>/status</code> at a reasonable interval (e.g. 2–5 seconds, with maximum backoff) until <code>rc</code> is final (<code>00</code> success or another failure code).</li>
 </ol>
-<h2 id="errors">Errors<a class="headerlink" href="#errors" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>rc = 11</code> — transaction not found (see <a href="../kode-respons/">response codes</a>).</li>
-</ul>
 
 
 
