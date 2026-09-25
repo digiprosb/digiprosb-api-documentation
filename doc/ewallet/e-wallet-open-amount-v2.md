@@ -124,13 +124,54 @@ Contoh:
 
 Untuk produk open amount V2, gunakan `code` inquiry `DRYN_INQ` dan `code` payment `DRYN02`. Format `idpel` tetap `{msisdn}#{nominal}`. Alur tetap **inquiry → payment**.
 
-## Perbedaan dengan direct purchase
+## 3. Cek status
 
-| Topik | E-wallet open amount | E-wallet direct purchase |
-|-------|----------------------|---------------------------|
-| Endpoint debit | `POST /payment` | `POST /purchase` |
-| Pra-cek | Wajib `POST /inquiry` | Tidak |
-| Field tujuan | `idpel` (`msisdn#nominal`) | `msisdn` + `code` |
-| Kode produk (V2) | Inquiry `DRYN_INQ`, payment `DRYN02` | Satu `code` di `/purchase` |
+Mengambil status terkini transaksi berdasarkan `request_id`.
 
-Direct purchase tanpa inquiry: [Ewallet Direct Purchase](ewallet-direct-purchase.md).
+**Base URL**
+
+```
+https://digipro.gw.socx.app/reseller/api/v1
+```
+
+**Endpoint:** `POST {base_url}/status`
+
+### Request
+
+```json
+{
+  "request_id": "2578072323871"
+}
+```
+
+### Respons sukses
+
+```json
+{
+  "code": "DRYN02",
+  "msisdn": "089678549508#1000",
+  "request_id": "2578072323871",
+  "rc": "00",
+  "trxid": 3745398,
+  "price": 1700,
+  "balance": 9793,
+  "sn": "DNID MAUXXXX EGXXXX/6289678549508/2026061010121481030100166091131018932",
+  "message": "SUKSES"
+}
+```
+
+### Respons gagal
+
+```json
+{
+  "code": "DRYN02",
+  "msisdn": "089678549508#1000",
+  "request_id": "2578072323871",
+  "rc": "23",
+  "trxid": 3745398,
+  "price": 1700,
+  "balance": 9793,
+  "sn": "",
+  "message": "Gagal, Gagal biller"
+}
+```

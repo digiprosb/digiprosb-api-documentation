@@ -120,12 +120,54 @@ Example:
 
 For open-amount products, `code` and `idpel` format follow the catalog (e.g. `CDANA`, `DANA_BEBAS`). The flow remains **inquiry → payment**; see the inquiry example in [Open denomination](dana-inquiry-denom-bebas.md).
 
-## Difference from direct purchase
+## 3. Check status
 
-| Topic | E-wallet open amount | E-wallet direct purchase |
-|-------|----------------------|---------------------------|
-| Debit endpoint | `POST /payment` | `POST /purchase` |
-| Pre-check | Required `POST /inquiry` | No |
-| Destination field | `idpel` (`msisdn#nominal`) | `msisdn` + `code` |
+Retrieve the current transaction status by `request_id`.
 
-Direct purchase without inquiry: [Ewallet Direct Purchase](ewallet-direct-purchase.md).
+**Base URL**
+
+```
+https://digipro.gw.socx.app/reseller/api/v1
+```
+
+**Endpoint:** `POST {base_url}/status`
+
+### Request
+
+```json
+{
+  "request_id": "2578072323871"
+}
+```
+
+### Success response
+
+```json
+{
+  "code": "SDANA_BEBAS",
+  "msisdn": "089678549508#1000",
+  "request_id": "2578072323871",
+  "rc": "00",
+  "trxid": 3745398,
+  "price": 1700,
+  "balance": 9793,
+  "sn": "DNID MAUXXXX EGXXXX/6289678549508/2026061010121481030100166091131018932",
+  "message": "SUKSES"
+}
+```
+
+### Failed response
+
+```json
+{
+  "code": "SDANA_BEBAS",
+  "msisdn": "089678549508#1000",
+  "request_id": "2578072323871",
+  "rc": "23",
+  "trxid": 3745398,
+  "price": 1700,
+  "balance": 9793,
+  "sn": "",
+  "message": "Gagal, Gagal biller"
+}
+```

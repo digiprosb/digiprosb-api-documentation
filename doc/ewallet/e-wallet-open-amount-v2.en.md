@@ -124,13 +124,54 @@ Example:
 
 For open-amount V2 products, use inquiry `code` `DRYN_INQ` and payment `code` `DRYN02`. The `idpel` format remains `{msisdn}#{nominal}`. The flow remains **inquiry → payment**.
 
-## Difference from direct purchase
+## 3. Check status
 
-| Topic | E-wallet open amount | E-wallet direct purchase |
-|-------|----------------------|---------------------------|
-| Debit endpoint | `POST /payment` | `POST /purchase` |
-| Pre-check | Required `POST /inquiry` | No |
-| Destination field | `idpel` (`msisdn#nominal`) | `msisdn` + `code` |
-| Product code (V2) | Inquiry `DRYN_INQ`, payment `DRYN02` | Single `code` on `/purchase` |
+Retrieve the current transaction status by `request_id`.
 
-Direct purchase without inquiry: [Ewallet Direct Purchase](ewallet-direct-purchase.md).
+**Base URL**
+
+```
+https://digipro.gw.socx.app/reseller/api/v1
+```
+
+**Endpoint:** `POST {base_url}/status`
+
+### Request
+
+```json
+{
+  "request_id": "2578072323871"
+}
+```
+
+### Success response
+
+```json
+{
+  "code": "DRYN02",
+  "msisdn": "089678549508#1000",
+  "request_id": "2578072323871",
+  "rc": "00",
+  "trxid": 3745398,
+  "price": 1700,
+  "balance": 9793,
+  "sn": "DNID MAUXXXX EGXXXX/6289678549508/2026061010121481030100166091131018932",
+  "message": "SUKSES"
+}
+```
+
+### Failed response
+
+```json
+{
+  "code": "DRYN02",
+  "msisdn": "089678549508#1000",
+  "request_id": "2578072323871",
+  "rc": "23",
+  "trxid": 3745398,
+  "price": 1700,
+  "balance": 9793,
+  "sn": "",
+  "message": "Gagal, Gagal biller"
+}
+```
