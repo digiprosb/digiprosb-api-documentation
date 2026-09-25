@@ -10,7 +10,7 @@
 **Base URL**
 
 ```
-https://digiprosb.gw.socx.app/reseller/api/v1
+https://digipro.gw.socx.app/reseller/api/v1
 ```
 **Header**      
 
