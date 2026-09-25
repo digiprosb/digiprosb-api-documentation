@@ -4,6 +4,10 @@
 
 > Previous version: [Ewallet Open Amount V1](e-wallet-open-amount.md)
 
+In V2, the **inquiry code and payment code are different**:
+- Inquiry: `DRYN_INQ`
+- Payment: `DRYN02`
+
 
 ## URL & authentication
 
@@ -23,7 +27,7 @@ Content-Type: application/json
 
 | Field | Required | Description |
 |-------|----------|-------------|
-| `code` | Yes | Product code, e.g. `DANA` |
+| `code` | Yes | Product code — inquiry: `DRYN_INQ`, payment: `DRYN02` |
 | `idpel` | Yes | `{msisdn}#{nominal}` |
 | `request_id` | Yes | Unique ID from your side |
 
@@ -46,7 +50,7 @@ Example:
 
 ```bash
 {
- "code":"SDANA_BEBAS",
+ "code":"DRYN_INQ",
  "idpel":"089678549508#1000",
  "request_id":"250270202302301"
 }
@@ -57,7 +61,7 @@ Example:
 
 ```json
 {
-    "code": "DANA_BEBAS",
+    "code": "DRYN_INQ",
     "idpel": "089678549508#1000",
     "request_id": "25027170202302301",
     "product_name": "DANA Denom Bebas",
@@ -84,7 +88,7 @@ Example:
 
 ```bash
 {
- "code":"SDANA_BEBAS",
+ "code":"DRYN02",
  "idpel":"089678549508#1000",
  "request_id":"2578072323871"
 }
@@ -94,7 +98,7 @@ Example:
 
 ```json
 {
-    "code": "",
+    "code": "DRYN02",
     "idpel": "089678549508#1000",
     "request_id": "257807232323871",
     "product_name": "SALDO DANA BEBAS",
@@ -118,7 +122,7 @@ Example:
 
 ## Open denomination
 
-For open-amount products, `code` and `idpel` format follow the catalog (e.g. `CDANA`, `DANA_BEBAS`). The flow remains **inquiry → payment**; see the inquiry example in [Open denomination](dana-inquiry-denom-bebas.md).
+For open-amount V2 products, use inquiry `code` `DRYN_INQ` and payment `code` `DRYN02`. The `idpel` format remains `{msisdn}#{nominal}`. The flow remains **inquiry → payment**.
 
 ## Difference from direct purchase
 
@@ -127,5 +131,6 @@ For open-amount products, `code` and `idpel` format follow the catalog (e.g. `CD
 | Debit endpoint | `POST /payment` | `POST /purchase` |
 | Pre-check | Required `POST /inquiry` | No |
 | Destination field | `idpel` (`msisdn#nominal`) | `msisdn` + `code` |
+| Product code (V2) | Inquiry `DRYN_INQ`, payment `DRYN02` | Single `code` on `/purchase` |
 
 Direct purchase without inquiry: [Ewallet Direct Purchase](ewallet-direct-purchase.md).

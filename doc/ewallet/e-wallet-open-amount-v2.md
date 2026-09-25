@@ -4,6 +4,10 @@ Alur **e-wallet open amount V2** (inquiry → payment): validasi dan rincian tag
 
 > Versi lama: [Ewallet Open Amount V1](e-wallet-open-amount.md)
 
+Pada V2, **kode inquiry dan kode payment berbeda**:
+- Inquiry: `DRYN_INQ`
+- Payment: `DRYN02`
+
 
 ## URL & autentikasi
 
@@ -23,7 +27,7 @@ Content-Type: application/json
 
 | Field | Wajib | Keterangan |
 |-------|-------|------------|
-| `code` | Ya | Kode produk, contoh: `DANA` |
+| `code` | Ya | Kode produk — inquiry: `DRYN_INQ`, payment: `DRYN02` |
 | `idpel` | Ya | `{msisdn}#{nominal}` |
 | `request_id` | Ya | ID unik dari sisi Anda |
 
@@ -46,7 +50,7 @@ Contoh:
 
 ```bash
 {
- "code":"SDANA_BEBAS",
+ "code":"DRYN_INQ",
  "idpel":"089678549508#1000",
  "request_id":"250270202302301"
 }
@@ -57,7 +61,7 @@ Contoh:
 
 ```json
 {
-    "code": "DANA_BEBAS",
+    "code": "DRYN_INQ",
     "idpel": "089678549508#1000",
     "request_id": "25027170202302301",
     "product_name": "DANA Denom Bebas",
@@ -84,7 +88,7 @@ Contoh:
 
 ```bash
 {
- "code":"SDANA_BEBAS",
+ "code":"DRYN02",
  "idpel":"089678549508#1000",
  "request_id":"2578072323871"
 }
@@ -94,7 +98,7 @@ Contoh:
 
 ```json
 {
-    "code": "",
+    "code": "DRYN02",
     "idpel": "089678549508#1000",
     "request_id": "257807232323871",
     "product_name": "SALDO DANA BEBAS",
@@ -118,7 +122,7 @@ Contoh:
 
 ## Denom bebas
 
-Untuk produk open amount, `code` dan format `idpel` mengikuti katalog (contoh `CDANA`, `DANA_BEBAS`). Alur tetap **inquiry → payment**; lihat contoh inquiry di [Denom bebas](dana-inquiry-denom-bebas.md).
+Untuk produk open amount V2, gunakan `code` inquiry `DRYN_INQ` dan `code` payment `DRYN02`. Format `idpel` tetap `{msisdn}#{nominal}`. Alur tetap **inquiry → payment**.
 
 ## Perbedaan dengan direct purchase
 
@@ -127,5 +131,6 @@ Untuk produk open amount, `code` dan format `idpel` mengikuti katalog (contoh `C
 | Endpoint debit | `POST /payment` | `POST /purchase` |
 | Pra-cek | Wajib `POST /inquiry` | Tidak |
 | Field tujuan | `idpel` (`msisdn#nominal`) | `msisdn` + `code` |
+| Kode produk (V2) | Inquiry `DRYN_INQ`, payment `DRYN02` | Satu `code` di `/purchase` |
 
 Direct purchase tanpa inquiry: [Ewallet Direct Purchase](ewallet-direct-purchase.md).
