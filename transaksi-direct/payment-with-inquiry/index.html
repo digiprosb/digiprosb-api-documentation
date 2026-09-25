@@ -538,6 +538,8 @@
       
         
       
+        
+      
     
     
     
@@ -627,7 +629,35 @@
   <span class="md-ellipsis">
     
   
-    Ewallet Open Amount
+    Ewallet Open Amount V1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ewallet/e-wallet-open-amount-v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ewallet Open Amount V2
   
 
     
@@ -1002,9 +1032,9 @@
 <p>Request detail (payload) mengikuti kontrak Digiprosb API untuk produk Anda.</p>
 <h2 id="ringkasan-langkah-integrasi">Ringkasan langkah integrasi<a class="headerlink" href="#ringkasan-langkah-integrasi" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong><code>POST /inquiry</code></strong> — kirim <code>code</code> dan field yang diminta (mis. <code>idpel</code> untuk PLN); pastikan <code>rc = 00</code> dan data tampilan (<code>info[]</code>) sesuai kebutuhan UI. Contoh: <a href="../../pln-prepaid/">PLN Prepaid</a>, <a href="../../ewallet/e-wallet-open-amount/">Ewallet Open Amount</a>.</li>
+<li><strong><code>POST /inquiry</code></strong> — kirim <code>code</code> dan field yang diminta (mis. <code>idpel</code> untuk PLN); pastikan <code>rc = 00</code> dan data tampilan (<code>info[]</code>) sesuai kebutuhan UI. Contoh: <a href="../../pln-prepaid/">PLN Prepaid</a>, <a href="../../ewallet/e-wallet-open-amount/">Ewallet Open Amount V1</a>, <a href="../../ewallet/e-wallet-open-amount-v2/">Ewallet Open Amount V2</a>.</li>
 <li><strong>Debit</strong> — <code>POST /payment</code> (open amount) atau <code>POST /purchase</code> (kategori lain). Referensi:
-   <a href="../../ewallet/e-wallet-open-amount/">Ewallet Open Amount</a>, <a href="../pembelian-pulsa-data/">pulsa/data</a>, <a href="../../game/topup-voucher/">game — Topup Game &amp; Voucher</a>, <a href="../../ewallet/ewallet-direct-purchase/">ewallet direct</a>.</li>
+   <a href="../../ewallet/e-wallet-open-amount/">Ewallet Open Amount V1</a>, <a href="../../ewallet/e-wallet-open-amount-v2/">Ewallet Open Amount V2</a>, <a href="../pembelian-pulsa-data/">pulsa/data</a>, <a href="../../game/topup-voucher/">game — Topup Game &amp; Voucher</a>, <a href="../../ewallet/ewallet-direct-purchase/">ewallet direct</a>.</li>
 <li><strong>Baca <code>rc</code></strong> — sama dengan alur tanpa inquiry; lihat <a href="../kode-respons/">kode respons</a>.</li>
 <li>Jika <strong><code>rc = 68</code></strong> — <a href="../cek-status/"><code>POST /status</code></a> atau callback (jika ada).</li>
 </ol>
@@ -1050,7 +1080,7 @@
 </tr>
 <tr>
 <td>E-wallet open amount (inquiry → payment)</td>
-<td><a href="../../ewallet/e-wallet-open-amount/">Ewallet Open Amount</a></td>
+<td><a href="../../ewallet/e-wallet-open-amount/">Ewallet Open Amount V1</a> · <a href="../../ewallet/e-wallet-open-amount-v2/">Ewallet Open Amount V2</a></td>
 </tr>
 </tbody>
 </table>
