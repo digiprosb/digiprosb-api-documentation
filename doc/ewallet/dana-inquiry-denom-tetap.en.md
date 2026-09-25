@@ -2,7 +2,7 @@
 
 An example of **fixed denom** (`code`: `DANA`, `idpel`: `{msisdn}#{nominal}`) is on the main full-flow page:
 
-**[Ewallet Open Amount](e-wallet-open-amount.md)**
+**[Ewallet Open Amount V1](e-wallet-open-amount.md)** · **[Ewallet Open Amount V2](e-wallet-open-amount-v2.md)**
 
 Inquiry-only summary (without the payment step):
 

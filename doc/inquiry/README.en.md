@@ -7,7 +7,8 @@ This section documents the **inquiry** endpoint (check customer data / product i
 | Page | Description |
 |------|-------------|
 | [PLN Prepaid](../pln-prepaid.md) | `POST /inquiry` — **PLN Prepaid** (`CPLN`) example, request & response |
-| [Ewallet Open Amount](../ewallet/e-wallet-open-amount.md) | `POST /inquiry` then `POST /payment` |
+| [Ewallet Open Amount V1](../ewallet/e-wallet-open-amount.md) | `POST /inquiry` then `POST /payment` (V1) |
+| [Ewallet Open Amount V2](../ewallet/e-wallet-open-amount-v2.md) | `POST /inquiry` then `POST /payment` (V2) |
 
 ## Authentication & network
 
@@ -31,7 +32,8 @@ Same as other reseller APIs:
 ## Links to transactions
 
 After inquiry, continue to the page for your category:
-[Ewallet Open Amount](../ewallet/e-wallet-open-amount.md),
+[Ewallet Open Amount V1](../ewallet/e-wallet-open-amount.md),
+[Ewallet Open Amount V2](../ewallet/e-wallet-open-amount-v2.md),
 [pulsa/data](../transaksi-direct/pembelian-pulsa-data.md),
 [game — Topup Game & Voucher](../game/topup-voucher.md), or
 [ewallet direct](../ewallet/ewallet-direct-purchase.md).

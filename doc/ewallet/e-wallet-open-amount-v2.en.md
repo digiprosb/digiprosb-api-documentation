@@ -1,8 +1,8 @@
-# Ewallet Open Amount V1
+# Ewallet Open Amount V2
 
-**E-wallet open amount V1** flow (inquiry → payment): validate and retrieve bill details via **`POST /inquiry`**, then pay via **`POST /payment`**.
+**E-wallet open amount V2** flow (inquiry → payment): validate and retrieve bill details via **`POST /inquiry`**, then pay via **`POST /payment`**.
 
-> Newer version: [Ewallet Open Amount V2](e-wallet-open-amount-v2.md)
+> Previous version: [Ewallet Open Amount V1](e-wallet-open-amount.md)
 
 
 ## URL & authentication
@@ -10,7 +10,7 @@
 **Base URL**
 
 ```
-https://api.digiprosb.id/reseller/api/v1
+https://digiprosb.gw.socx.app/reseller/api/v1
 ```
 **Header**      
 

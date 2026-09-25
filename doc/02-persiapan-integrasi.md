@@ -108,5 +108,5 @@ sequenceDiagram
 - Purchase game: [Topup Game & Voucher](game/topup-voucher.md)
 - Purchase ewallet: [Ewallet Direct Purchase](ewallet/ewallet-direct-purchase.md)
 - PLN Prepaid: [PLN Prepaid](pln-prepaid.md)
-- E-wallet open amount (inquiry → payment): [Ewallet Open Amount](ewallet/e-wallet-open-amount.md)
+- E-wallet open amount (inquiry → payment): [Ewallet Open Amount V1](ewallet/e-wallet-open-amount.md) · [Ewallet Open Amount V2](ewallet/e-wallet-open-amount-v2.md)
 - Callback (hasil final): [Callback](callback.md)

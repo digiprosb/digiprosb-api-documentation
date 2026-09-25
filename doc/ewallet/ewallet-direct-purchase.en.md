@@ -81,5 +81,5 @@ Full list of result codes (`rc`), pending (`68`), and errors: **[Response codes 
 
 ## Notes
 
-- The **e-wallet open amount** flow (`POST /inquiry` → `POST /payment`) is separate: [Ewallet Open Amount](e-wallet-open-amount.md).
+- The **e-wallet open amount** flow (`POST /inquiry` → `POST /payment`) is separate: [Ewallet Open Amount V1](e-wallet-open-amount.md) · [Ewallet Open Amount V2](e-wallet-open-amount-v2.md).
 - Avoid double status updates: use `request_id` / `trxid` as the idempotency key in your system.

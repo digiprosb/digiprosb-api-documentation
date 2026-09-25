@@ -11,7 +11,8 @@ This document covers **Host-to-Host (H2H)** reseller integration with the Digipr
 | → [PREPAID — Pulsa & Data](transaksi-direct/pembelian-pulsa-data.md) | `POST /purchase` prepaid: request, response & callback |
 | → [Game & Voucher Topup](game/topup-voucher.md) | `POST /purchase` game: request, response & callback |
 | → [Ewallet Direct Purchase](ewallet/ewallet-direct-purchase.md) | `POST /purchase` e-wallet: request, response & callback |
-| → [Ewallet Open Amount](ewallet/e-wallet-open-amount.md) | `POST /inquiry` then `POST /payment`: request & response |
+| → [Ewallet Open Amount V1](ewallet/e-wallet-open-amount.md) | `POST /inquiry` then `POST /payment` (legacy base URL) |
+| → [Ewallet Open Amount V2](ewallet/e-wallet-open-amount-v2.md) | `POST /inquiry` then `POST /payment` (new base URL) |
 | → [PLN Prepaid](pln-prepaid.md) | `POST /purchase` PLN Direct Purchase and Direct with Inquiry  |
 | → [Check status](transaksi-direct/cek-status.md) | `POST /status` |
 | → [Check balance](transaksi-direct/cek-saldo.md) | `GET /saldo` |

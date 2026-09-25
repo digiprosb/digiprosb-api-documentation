@@ -1,16 +1,16 @@
-# Ewallet Open Amount V1
+# Ewallet Open Amount V2
 
-**E-wallet open amount V1** flow (inquiry → payment): validate and retrieve bill details via **`POST /inquiry`**, then pay via **`POST /payment`**.
+Alur **e-wallet open amount V2** (inquiry → payment): validasi dan rincian tagihan lewat **`POST /inquiry`**, lalu pembayaran lewat **`POST /payment`**.
 
-> Newer version: [Ewallet Open Amount V2](e-wallet-open-amount-v2.md)
+> Versi lama: [Ewallet Open Amount V1](e-wallet-open-amount.md)
 
 
-## URL & authentication
+## URL & autentikasi
 
 **Base URL**
 
 ```
-https://api.digiprosb.id/reseller/api/v1
+https://digiprosb.gw.socx.app/reseller/api/v1
 ```
 **Header**      
 
@@ -19,22 +19,22 @@ Authorization: Bearer <JWT>
 Content-Type: application/json
 ```
 
-## Payload data format
+## Format Data Payload
 
-| Field | Required | Description |
-|-------|----------|-------------|
-| `code` | Yes | Product code, e.g. `DANA` |
-| `idpel` | Yes | `{msisdn}#{nominal}` |
-| `request_id` | Yes | Unique ID from your side |
+| Field | Wajib | Keterangan |
+|-------|-------|------------|
+| `code` | Ya | Kode produk, contoh: `DANA` |
+| `idpel` | Ya | `{msisdn}#{nominal}` |
+| `request_id` | Ya | ID unik dari sisi Anda |
 
 
-Destination number and amount are joined with `#`:
+Nomor tujuan dan nominal digabung dengan `#`:
 
 ```
 {msisdn}#{nominal}
 ```
 
-Example:
+Contoh:
 
 ## 1. Inquiry
 
@@ -53,7 +53,7 @@ Example:
 
 ```
 
-### Response
+### Respons
 
 ```json
 {
@@ -90,7 +90,7 @@ Example:
 }
 ```
 
-### Response
+### Respons
 
 ```json
 {
@@ -116,16 +116,16 @@ Example:
 }
 ```
 
-## Open denomination
+## Denom bebas
 
-For open-amount products, `code` and `idpel` format follow the catalog (e.g. `CDANA`, `DANA_BEBAS`). The flow remains **inquiry → payment**; see the inquiry example in [Open denomination](dana-inquiry-denom-bebas.md).
+Untuk produk open amount, `code` dan format `idpel` mengikuti katalog (contoh `CDANA`, `DANA_BEBAS`). Alur tetap **inquiry → payment**; lihat contoh inquiry di [Denom bebas](dana-inquiry-denom-bebas.md).
 
-## Difference from direct purchase
+## Perbedaan dengan direct purchase
 
-| Topic | E-wallet open amount | E-wallet direct purchase |
+| Topik | E-wallet open amount | E-wallet direct purchase |
 |-------|----------------------|---------------------------|
-| Debit endpoint | `POST /payment` | `POST /purchase` |
-| Pre-check | Required `POST /inquiry` | No |
-| Destination field | `idpel` (`msisdn#nominal`) | `msisdn` + `code` |
+| Endpoint debit | `POST /payment` | `POST /purchase` |
+| Pra-cek | Wajib `POST /inquiry` | Tidak |
+| Field tujuan | `idpel` (`msisdn#nominal`) | `msisdn` + `code` |
 
-Direct purchase without inquiry: [Ewallet Direct Purchase](ewallet-direct-purchase.md).
+Direct purchase tanpa inquiry: [Ewallet Direct Purchase](ewallet-direct-purchase.md).

@@ -13,9 +13,9 @@ Request details (payload) follow the Digiprosb API contract for your product.
 
 ## Integration steps summary
 
-1. **`POST /inquiry`** — send `code` and required fields (e.g. `idpel` for PLN); ensure `rc = 00` and display data (`info[]`) match UI needs. Examples: [PLN Prepaid](../pln-prepaid.md), [Ewallet Open Amount](../ewallet/e-wallet-open-amount.md).
+1. **`POST /inquiry`** — send `code` and required fields (e.g. `idpel` for PLN); ensure `rc = 00` and display data (`info[]`) match UI needs. Examples: [PLN Prepaid](../pln-prepaid.md), [Ewallet Open Amount V1](../ewallet/e-wallet-open-amount.md), [Ewallet Open Amount V2](../ewallet/e-wallet-open-amount-v2.md).
 2. **Debit** — `POST /payment` (open amount) or `POST /purchase` (other categories). References:
-   [Ewallet Open Amount](../ewallet/e-wallet-open-amount.md), [pulsa/data](pembelian-pulsa-data.md), [game — Topup Game & Voucher](../game/topup-voucher.md), [ewallet direct](../ewallet/ewallet-direct-purchase.md).
+   [Ewallet Open Amount V1](../ewallet/e-wallet-open-amount.md), [Ewallet Open Amount V2](../ewallet/e-wallet-open-amount-v2.md), [pulsa/data](pembelian-pulsa-data.md), [game — Topup Game & Voucher](../game/topup-voucher.md), [ewallet direct](../ewallet/ewallet-direct-purchase.md).
 3. **Read `rc`** — same as the without-inquiry flow; see [response codes](kode-respons.md).
 4. If **`rc = 68`** — [`POST /status`](cek-status.md) or callback (if available).
 
@@ -49,7 +49,7 @@ sequenceDiagram
 | General inquiry contract | [Inquiry & catalog](../inquiry/README.md) |
 | PLN Prepaid | [PLN Prepaid](../pln-prepaid.md) |
 | PLN prepaid | [PLN Prepaid](../pln-prepaid.md) |
-| E-wallet open amount (inquiry → payment) | [Ewallet Open Amount](../ewallet/e-wallet-open-amount.md) |
+| E-wallet open amount (inquiry → payment) | [Ewallet Open Amount V1](../ewallet/e-wallet-open-amount.md) · [Ewallet Open Amount V2](../ewallet/e-wallet-open-amount-v2.md) |
 
 ## Notes
 

@@ -31,6 +31,6 @@ Example response:
 }
 ```
 
-After a successful inquiry, continue with **`POST /payment`** using the same `code` / `idpel` and a new `request_id` — see [Ewallet Open Amount](e-wallet-open-amount.md).
+After a successful inquiry, continue with **`POST /payment`** using the same `code` / `idpel` and a new `request_id` — see [Ewallet Open Amount V1](e-wallet-open-amount.md) · [Ewallet Open Amount V2](e-wallet-open-amount-v2.md).
 
 See also: [Fixed denom](dana-inquiry-denom-tetap.md)

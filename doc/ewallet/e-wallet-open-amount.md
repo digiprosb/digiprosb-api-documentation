@@ -1,6 +1,8 @@
-# Ewallet Open Amount
+# Ewallet Open Amount V1
 
-Alur **e-wallet open amount** (inquiry → payment): validasi dan rincian tagihan lewat **`POST /inquiry`**, lalu pembayaran lewat **`POST /payment`**.
+Alur **e-wallet open amount V1** (inquiry → payment): validasi dan rincian tagihan lewat **`POST /inquiry`**, lalu pembayaran lewat **`POST /payment`**.
+
+> Versi baru: [Ewallet Open Amount V2](e-wallet-open-amount-v2.md)
 
 
 ## URL & autentikasi

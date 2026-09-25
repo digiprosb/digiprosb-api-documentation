@@ -22,7 +22,8 @@ Dokumentasi tersedia dalam **Indonesia** dan **English** (ikon translate di navb
 
 - [Ringkasan EWALLET](doc/ewallet/README.md)
 - [E-wallet Direct Purchase](doc/ewallet/ewallet-direct-purchase.md)
-- [Ewallet Open Amount](doc/ewallet/e-wallet-open-amount.md)
+- [Ewallet Open Amount V1](doc/ewallet/e-wallet-open-amount.md)
+- [Ewallet Open Amount V2](doc/ewallet/e-wallet-open-amount-v2.md)
 
 ### Inquiry khusus
 
